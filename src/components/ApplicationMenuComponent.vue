@@ -18,9 +18,9 @@ const menuItems = ref([
         >Get An Appointment <ion-icon name="arrow-forward-outline"></ion-icon
       ></RouterLink>
     </div>
-    <div class="w-full flex justify-center items-center z-50">
+    <div class="w-full flex justify-center items-center">
       <ul
-        class="flex justify-around p-3 bg-second text-primary text-2xl w-full max-w-96 rounded-full m-2"
+        class="flex justify-around p-3 bg-second z-50 text-primary text-2xl w-full max-w-96 rounded-full m-2"
       >
         <li v-for="menuItem in menuItems" :key="menuItem">
           <RouterLink :to="menuItem.link" class="p-2 m-2">
