@@ -20,10 +20,10 @@ const menuItems = ref([
     </div>
     <div class="w-full flex justify-center items-center">
       <ul
-        class="flex justify-around p-3 bg-second text-primary text-2xl w-full max-w-96 rounded-full m-2"
+        class="flex justify-around items-center p-3 h-16 border-2 border-primary shadow-lg bg-second text-primary text-2xl w-full max-w-96 rounded-full m-2"
       >
         <li v-for="menuItem in menuItems" :key="menuItem">
-          <RouterLink :to="menuItem.link" class="p-2 m-2">
+          <RouterLink :to="menuItem.link" class="p-2 m-2 flex items-center justify-center">
             <ion-icon :name="menuItem.icon"></ion-icon>
           </RouterLink>
         </li>
@@ -34,8 +34,8 @@ const menuItems = ref([
 
 <style scoped>
 ul li:nth-child(3) a {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   padding: 5;
   border-radius: 100%;
   background: #a86332;
