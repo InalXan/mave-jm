@@ -1,6 +1,7 @@
 <script setup>
 import IntroUtil from '@/utils/IntroUtil.vue'
 import FixedUtil from '@/utils/FixedUtil.vue'
+import SponsorUtil from '@/utils/SponsorUtil.vue'
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -176,4 +177,7 @@ const cardItems = ref([
     </div>
   </div>
   <!-- about end  -->
+
+  <!-- sponsor start -->
+  <SponsorUtil />
 </template>

@@ -1,6 +1,3 @@
-<script setup>
-import SponsorUtil from '@/utils/SponsorUtil.vue'
-</script>
 <template>
   <!-- intro start  -->
   <div id="intro" class="md:my-18 w-full flex justify-center items-center bg-second">
@@ -39,7 +36,4 @@ import SponsorUtil from '@/utils/SponsorUtil.vue'
       </div>
     </div>
   </div>
-
-  <!-- sponsor start -->
-  <SponsorUtil />
 </template>
