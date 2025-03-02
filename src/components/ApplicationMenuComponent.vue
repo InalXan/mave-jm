@@ -10,7 +10,7 @@ const menuItems = ref([
 ])
 </script>
 <template>
-  <div class="flex md:hidden flex-col justify-center items-center w-full fixed bottom-0">
+  <div class="flex md:hidden flex-col z-50 justify-center items-center w-full fixed bottom-0">
     <div class="w-full flex justify-end">
       <RouterLink
         to="/contact"
@@ -20,7 +20,7 @@ const menuItems = ref([
     </div>
     <div class="w-full flex justify-center items-center">
       <ul
-        class="flex justify-around p-3 bg-second z-50 text-primary text-2xl w-full max-w-96 rounded-full m-2"
+        class="flex justify-around p-3 bg-second text-primary text-2xl w-full max-w-96 rounded-full m-2"
       >
         <li v-for="menuItem in menuItems" :key="menuItem">
           <RouterLink :to="menuItem.link" class="p-2 m-2">
