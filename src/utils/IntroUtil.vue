@@ -3,7 +3,7 @@ import SponsorUtil from '@/utils/SponsorUtil.vue'
 </script>
 <template>
   <!-- intro start  -->
-  <div id="intro" class="w-full flex justify-center items-center bg-second">
+  <div id="intro" class="md:my-18 w-full flex justify-center items-center bg-second">
     <div
       class="flex justify-center items-center shadow-2xl sm:flex-row flex-col w-full max-w-[98%] my-18 mx-5 rounded-4xl md:h-[60vh] min-h-[60vh] gap-8 bg-primary bg-[url('@/assets/images/textures/intro/intro.png')] bg-center bg-cover"
     >

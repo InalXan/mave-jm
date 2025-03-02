@@ -1,5 +1,6 @@
 <script setup>
 import IntroUtil from '@/utils/IntroUtil.vue'
+import FixedUtil from '@/utils/FixedUtil.vue'
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -20,6 +21,8 @@ const cardItems = ref([
 ])
 </script>
 <template>
+  <!-- General Components start -->
+  <FixedUtil />
   <!-- intro start  -->
   <IntroUtil />
   <!-- services start  -->
