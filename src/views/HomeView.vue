@@ -63,7 +63,7 @@ const cardItems = ref([
           <div class="absolute m-2 border border-dashed border-primary w-full h-92"></div>
         </div>
         <div
-          class="w-52 h-48 rounded-full bg-second bg-center bg-cover bg-[url('@/assets/images/logo/logo.png')]"
+          class="h-48 rounded-full bg-second bg-center bg-cover bg-[url('@/assets/images/logo/logo.png')]"
         ></div>
       </div>
       <div class="flex flex-col justify-center items-center text-second">
