@@ -3,7 +3,7 @@
     <div class="group">
       <div class="relative flex justify-center items-center">
         <!-- Logo -->
-        <img src="@/assets/images/logo/logo.png" class="w-48" alt="" />
+        <img src="@/assets/images/logo/loader.png" class="w-48" alt="" />
         <!-- Spinner -->
         <div
           class="absolute w-16 h-16 border-4 border-t-transparent border-blue-500 rounded-full animate-spin opacity-0 group-hover:opacity-100 transition-opacity duration-500"
