@@ -12,11 +12,11 @@ const menuItems = ref([
 <template>
   <div class="flex md:hidden flex-col z-50 justify-center items-center w-full fixed bottom-0">
     <div class="w-full flex justify-end">
-      <RouterLink
-        to="/contact"
+      <a
+        href="#"
         class="p-2 bg-primary flex items-center text-second m-2 shadow-xl hover:bg-second hover:text-primary transition-all font-bold rounded-full"
-        >Get An Appointment <ion-icon name="arrow-forward-outline"></ion-icon
-      ></RouterLink>
+        >whatsapp <ion-icon name="arrow-forward-outline"></ion-icon
+      ></a>
     </div>
     <div class="w-full flex justify-center items-center">
       <ul

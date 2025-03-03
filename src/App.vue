@@ -14,3 +14,28 @@ setTimeout(() => {
   <FooterComponent />
   <LoaderComponent v-if="isLoading" />
 </template>
+<style scoped>
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a86332;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d3d3d3;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+</style>

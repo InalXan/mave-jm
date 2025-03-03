@@ -42,11 +42,11 @@ const menuItems = ref([
     <!-- content start  -->
     <div class="flex justify-end w-1/3 items-center">
       <!-- menu button  -->
-      <RouterLink
-        to="/contact"
-        class="p-2 bg-primary flex items-center text-second shadow-xl hover:bg-second hover:text-primary transition-all font-bold rounded-full"
-        >Get An Appointment <ion-icon name="arrow-forward-outline"></ion-icon
-      ></RouterLink>
+      <a
+        href="#"
+        class="p-2 bg-primary flex items-center text-second m-2 shadow-xl hover:bg-second hover:text-primary transition-all font-bold rounded-full"
+        >whatsapp <ion-icon name="arrow-forward-outline"></ion-icon
+      ></a>
     </div>
   </div>
 </template>
