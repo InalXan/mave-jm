@@ -10,6 +10,15 @@ const menuItems = ref([
 ])
 </script>
 <template>
+  <div
+    class="fixed top-2 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] h-16 flex md:hidden bg-second/50 backdrop-blur-md z-50 rounded-full py-2 px-4 justify-center items-center transition-all duration-300 ease-in-out"
+  >
+    <img
+      src="@/assets/images/logo/logo.png"
+      class="w-20 md:w-24 transition-transform duration-300 ease-in-out hover:scale-110"
+      alt="Logo"
+    />
+  </div>
   <div class="fixed top-0 w-full p-2 md:flex hidden justify-between items-center">
     <!-- logo start  -->
     <div class="w-1/3">

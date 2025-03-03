@@ -20,7 +20,7 @@ const menuItems = ref([
     </div>
     <div class="w-full flex justify-center items-center">
       <ul
-        class="flex justify-around items-center p-3 h-16 border-2 border-primary shadow-lg bg-second text-primary text-2xl w-full max-w-96 rounded-full m-2"
+        class="flex bg-second/50 backdrop-blur-md justify-around items-center p-3 h-16 border-2 border-primary shadow-lg text-primary text-2xl w-full max-w-96 rounded-full m-2"
       >
         <li v-for="menuItem in menuItems" :key="menuItem">
           <RouterLink :to="menuItem.link" class="p-2 m-2 flex items-center justify-center">
