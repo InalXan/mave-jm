@@ -1,15 +1,13 @@
 <template>
-  <footer class="bg-second">
+  <footer class="bg-[url('@/assets/images/textures/world.png')] bg-primary bg-center bg-cover">
     <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
-          <div class="flex justify-center text-primary sm:justify-start">
+          <div class="flex justify-center text-second sm:justify-start">
             <img src="@/assets/images/logo/logo.png" class="w-24" alt="" />
           </div>
 
-          <p
-            class="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left"
-          >
+          <p class="mt-6 max-w-md text-center leading-relaxed text-second sm:max-w-xs sm:text-left">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet
             culpa cum itaque neque.
           </p>
@@ -20,7 +18,7 @@
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                class="text-primary text-2xl transition hover:text-primary-700/75"
+                class="text-second text-2xl transition hover:text-primary-700/75"
               >
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
@@ -31,7 +29,7 @@
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                class="text-primary text-2xl transition hover:text-primary-700/75"
+                class="text-second text-2xl transition hover:text-primary-700/75"
               >
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
@@ -42,7 +40,7 @@
                 href="#"
                 rel="noreferrer"
                 target="_blank"
-                class="text-primary text-2xl transition hover:text-primary-700/75"
+                class="text-second text-2xl transition hover:text-primary-700/75"
               >
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
@@ -52,59 +50,59 @@
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">About Us</p>
+            <p class="text-lg font-medium text-second">About Us</p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> visa </a>
               </li>
             </ul>
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">Our Services</p>
+            <p class="text-lg font-medium text-second">Our Services</p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> Visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> Visa </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Visa </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> Visa </a>
               </li>
             </ul>
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">Helpful Links</p>
+            <p class="text-lg font-medium text-second">Helpful Links</p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> FAQs </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> FAQs </a>
               </li>
 
               <li>
-                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Support </a>
+                <a class="text-second transition hover:text-gray-700/75" href="#"> Support </a>
               </li>
 
               <li>
@@ -118,9 +116,9 @@
 
                   <span class="relative flex size-2">
                     <span
-                      class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"
+                      class="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-500 opacity-75"
                     ></span>
-                    <span class="relative inline-flex size-2 rounded-full bg-primary"></span>
+                    <span class="relative inline-flex size-2 rounded-full bg-teal-500"></span>
                   </span>
                 </a>
               </li>
@@ -128,7 +126,7 @@
           </div>
 
           <div class="text-center sm:text-left">
-            <p class="text-lg font-medium text-gray-900">Contact Us</p>
+            <p class="text-lg font-medium text-second">Contact Us</p>
 
             <ul class="mt-8 space-y-4 text-sm">
               <li>
@@ -138,7 +136,7 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-5 shrink-0 text-gray-900"
+                    class="size-5 shrink-0 text-second"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -151,7 +149,7 @@
                     />
                   </svg>
 
-                  <span class="flex-1 text-gray-700">info@mave.com</span>
+                  <span class="flex-1 text-second">info@mave-jm.com</span>
                 </a>
               </li>
 
@@ -162,7 +160,7 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="size-5 shrink-0 text-gray-900"
+                    class="size-5 shrink-0 text-second"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -175,7 +173,7 @@
                     />
                   </svg>
 
-                  <span class="flex-1 text-gray-700">0123456789</span>
+                  <span class="flex-1 text-second">0123456789</span>
                 </a>
               </li>
 
@@ -184,7 +182,7 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="size-5 shrink-0 text-gray-900"
+                  class="size-5 shrink-0 text-second"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -202,7 +200,7 @@
                   />
                 </svg>
 
-                <address class="-mt-0.5 flex-1 not-italic text-gray-700">
+                <address class="-mt-0.5 flex-1 not-italic text-second">
                   213 Lane, London, United Kingdom
                 </address>
               </li>
@@ -213,11 +211,11 @@
 
       <div class="mt-12 border-t border-gray-100 pt-6">
         <div class="text-center sm:flex sm:justify-between sm:text-left">
-          <p class="text-sm text-gray-500">
+          <p class="text-sm text-second">
             <span class="block sm:inline">All rights reserved.</span>
 
             <a
-              class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+              class="inline-block text-second underline transition hover:text-teal-600/75"
               href="#"
             >
               Terms & Conditions
@@ -226,16 +224,14 @@
             <span>&middot;</span>
 
             <a
-              class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+              class="inline-block text-second underline transition hover:text-teal-600/75"
               href="#"
             >
               Privacy Policy
             </a>
           </p>
 
-          <p class="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-            &copy; 2025 layoutlore LLC
-          </p>
+          <p class="mt-4 text-sm text-second sm:order-first sm:mt-0">&copy; 2025 layoutlore LLC</p>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 import IntroUtil from '@/utils/IntroUtil.vue'
 import FixedUtil from '@/utils/FixedUtil.vue'
 import SponsorUtil from '@/utils/SponsorUtil.vue'
+import FlagsUtil from '@/utils/FlagsUtil.vue'
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -26,9 +27,7 @@ const cardItems = ref([
   <FixedUtil />
   <!-- intro start  -->
   <IntroUtil />
-
-  <!-- sponsor start -->
-  <SponsorUtil />
+  <FlagsUtil />
   <!-- services start  -->
   <div class="w-full flex justify-center items-center">
     <div class="flex flex-wrap md:flex-nowrap justify-center gap-5 my-10 w-full">
@@ -56,6 +55,8 @@ const cardItems = ref([
     </div>
   </div>
   <!-- services end  -->
+  <!-- sponsor start -->
+  <SponsorUtil />
   <!-- about start  -->
   <div class="w-full flex justify-center md:flex-row flex-col">
     <!-- left side  -->
