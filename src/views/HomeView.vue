@@ -26,6 +26,9 @@ const cardItems = ref([
   <FixedUtil />
   <!-- intro start  -->
   <IntroUtil />
+
+  <!-- sponsor start -->
+  <SponsorUtil />
   <!-- services start  -->
   <div class="w-full flex justify-center items-center">
     <div class="flex flex-wrap md:flex-nowrap justify-center gap-5 my-10 w-full">
@@ -63,9 +66,9 @@ const cardItems = ref([
         >
           <div class="absolute m-2 border border-dashed border-primary w-full h-92"></div>
         </div>
-        <div
-          class="h-48 rounded-full bg-second bg-center bg-cover bg-[url('@/assets/images/logo/logo.png')]"
-        ></div>
+        <div class="h-48 rounded-full bg-second">
+          <img src="@/assets/images/logo/logo.png" alt="" />
+        </div>
       </div>
       <div class="flex flex-col justify-center items-center text-second">
         <div class="h-16 w-52 rounded-2xl py-4 flex items-center justify-center bg-primary">
@@ -177,7 +180,4 @@ const cardItems = ref([
     </div>
   </div>
   <!-- about end  -->
-
-  <!-- sponsor start -->
-  <SponsorUtil />
 </template>

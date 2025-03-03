@@ -19,7 +19,9 @@ const menuItems = ref([
       alt="Logo"
     />
   </div>
-  <div class="fixed top-0 w-full p-2 md:flex hidden justify-between items-center">
+  <div
+    class="fixed top-0 w-full p-2 md:flex hidden justify-between items-center bg-second/50 backdrop-blur-md"
+  >
     <!-- logo start  -->
     <div class="w-1/3">
       <img src="@/assets/images/logo/logo.png" class="w-28" alt="" />
