@@ -20,7 +20,7 @@ const menuItems = ref([
     />
   </div>
   <div
-    class="fixed top-0 w-full p-2 md:flex hidden justify-between items-center bg-second/50 backdrop-blur-md"
+    class="fixed top-0 w-full p-2 md:flex hidden justify-between items-center bg-second/50 backdrop-blur-md z-50"
   >
     <!-- logo start  -->
     <div class="w-1/3">
