@@ -44,7 +44,7 @@ const menuItems = ref([
       <!-- menu button  -->
       <a
         href="#"
-        class="p-2 bg-primary flex items-center text-second m-2 shadow-xl hover:bg-second hover:text-primary transition-all font-bold rounded-full"
+        class="p-2 bg-teal-700 flex justify-center items-center text-second m-2 shadow-xl hover:bg-second hover:text-primary transition-all font-bold rounded-full"
         >whatsapp <ion-icon name="arrow-forward-outline"></ion-icon
       ></a>
     </div>

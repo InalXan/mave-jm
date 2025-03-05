@@ -8,7 +8,7 @@
       :mousewheel="true"
       :keyboard="true"
       :modules="modules"
-      class="mySwiper"
+      class="flex justify-center items-center"
     >
       <swiper-slide
         class="flex justify-center items-center sm:flex-row flex-col w-full max-w-[98%] rounded-4xl md:h-[60vh] min-h-[60vh]"
@@ -19,10 +19,10 @@
           <!-- left side  -->
           <div class="text-second flex flex-col">
             <div>
-              <h1 class="text-4xl select-none my-10 text-left tracking-widest leading-11">
-                Visa Made Easy <br />
-                Dreams Made <br />
-                Possible
+              <h1
+                class="text-4xl w-72 select-none my-10 mx-10 text-left tracking-widest leading-11"
+              >
+                Hayatınızda Yeni Başlangıçlar Yapmanın Tam Zamanı<br />
               </h1>
             </div>
             <!-- buttons  -->
@@ -30,18 +30,18 @@
               <RouterLink
                 class="p-4 border border-second rounded-full transition-all hover:bg-primary hover:text-second"
                 to="/"
-                >Read More -></RouterLink
+                >Daha fazla -></RouterLink
               >
               <RouterLink
                 class="p-4 rounded-full flex items-center justify-center transition-all"
                 to="/"
               >
-                <ion-icon name="arrow-forward-outline"></ion-icon> Order</RouterLink
+                <ion-icon name="arrow-forward-outline"></ion-icon> Hemen Başvur</RouterLink
               >
             </div>
           </div>
           <!-- right side  -->
-          <div class="hidden items-end h-full sm:flex">
+          <div class="flex items-end h-full">
             <div
               class="w-82 h-96 bg-[url('@/assets/images/textures/intro/intro_image.png')] bg-center bg-cover"
             ></div>
@@ -57,10 +57,11 @@
           <!-- left side  -->
           <div class="text-second flex flex-col">
             <div>
-              <h1 class="text-4xl select-none my-10 text-left tracking-widest leading-11">
-                Visa Made Easy <br />
-                Dreams Made <br />
-                Possible
+              <h1
+                class="text-4xl w-72 select-none my-10 mx-10 text-left tracking-widest leading-11"
+              >
+                Vize almak bu kadar <br />
+                kolay olmamıştı
               </h1>
             </div>
             <!-- buttons  -->
@@ -68,18 +69,18 @@
               <RouterLink
                 class="p-4 border border-second rounded-full transition-all hover:bg-primary hover:text-second"
                 to="/"
-                >Read More -></RouterLink
+                >Daha fazla -></RouterLink
               >
               <RouterLink
                 class="p-4 rounded-full flex items-center justify-center transition-all"
                 to="/"
               >
-                <ion-icon name="arrow-forward-outline"></ion-icon> Order</RouterLink
+                <ion-icon name="arrow-forward-outline"></ion-icon> Hemen Başvur</RouterLink
               >
             </div>
           </div>
           <!-- right side  -->
-          <div class="hidden items-end h-full sm:flex">
+          <div class="flex items-end h-full">
             <div
               class="w-82 h-96 bg-[url('@/assets/images/textures/intro/intro_image1.png')] bg-center bg-cover"
             ></div>
@@ -95,10 +96,11 @@
           <!-- left side  -->
           <div class="text-second flex flex-col">
             <div>
-              <h1 class="text-4xl select-none my-10 text-left tracking-widest leading-11">
-                Visa Made Easy <br />
-                Dreams Made <br />
-                Possible
+              <h1
+                class="text-4xl w-72 mx-10 select-none my-10 text-left tracking-widest leading-11"
+              >
+                Hayallerinizi Gezerek<br />
+                Yaşayın
               </h1>
             </div>
             <!-- buttons  -->
@@ -117,7 +119,7 @@
             </div>
           </div>
           <!-- right side  -->
-          <div class="hidden items-end h-full sm:flex">
+          <div class="flex items-end h-full">
             <div
               class="w-82 h-96 bg-[url('@/assets/images/textures/intro/intro_image2.png')] bg-center bg-cover"
             ></div>
