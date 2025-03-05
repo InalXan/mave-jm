@@ -7,18 +7,21 @@ import { ref } from 'vue'
 const cardItems = ref([
   {
     icon: 'globe',
-    title: 'Food and Wine Tours',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quasi provident ratione officiis quisquam voluptas itaque nobis architecto.',
+    img: new URL('@/assets/images/contents/home/tourist-visa.jpg', import.meta.url).href,
+    title: 'Turist Vize Danışmanlığı',
+    desc: 'Turist Vize başvuru sürecinizi kolaylaştırarak, seyahat planlarınızı mümkün kılmak için profesyonel rehberlik sunuyoruz.',
   },
   {
     icon: 'compass',
-    title: 'Travel Opportunities',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quasi provident ratione officiis quisquam voluptas itaque nobis architecto.',
+    img: new URL('@/assets/images/contents/home/tourist-visa.jpg', import.meta.url).href,
+    title: 'Çalışma Vizesi Danışmanlığı',
+    desc: 'Yurtdışında kariyer fırsatlarını keşfetmeniz için uzmanlıkla hazırlanmış danışmanlık hizmeti sunuyoruz.',
   },
   {
     icon: 'ticket',
-    title: 'Food and Wine Tours',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quasi provident ratione officiis quisquam voluptas itaque nobis architecto.',
+    img: new URL('@/assets/images/contents/home/tourist-visa.jpg', import.meta.url).href,
+    title: 'Yurtdışı Eğitim Danışmanlığı ',
+    desc: 'Uluslararası eğitim fırsatlarını araştırmanıza ve en uygun olanı bulmanıza yardımcı olmak için danışmanlık sağlıyoruz.',
   },
 ])
 </script>
@@ -29,34 +32,47 @@ const cardItems = ref([
   <IntroUtil />
   <FlagsUtil />
   <!-- services start  -->
-  <div class="w-full flex justify-center items-center">
-    <div class="flex flex-wrap md:flex-nowrap justify-center gap-5 my-10 w-full">
-      <!-- Card Start -->
+  <div class="w-full flex justify-center items-center flex-col">
+    <!-- header  -->
+    <div class="w-full text-3xl">
+      <h1 class="m-4">
+        Keşfetmeniz için tüm seyahat ihtiyaçlarınızı <br />
+        <span class="font-bold">tek bir çatı altında karşılayan Mave Vize !</span>
+      </h1>
+    </div>
+    <!-- cards  -->
+    <div class="w-full flex justify-around items-center gap-3 flex-wrap md:flex-nowrap">
+      <!-- card start  -->
       <div
+        class="w-82 h-auto rounded-4xl shadow-xl border border-primary/80 m-2"
         v-for="cardItem in cardItems"
-        :key="cardItem.id"
-        class="w-full md:w-1/2 lg:w-1/3 min-h-48 p-5 rounded-3xl shadow-sm bg-white"
+        :key="cardItem"
       >
-        <div class="flex flex-col p-5">
-          <div
-            class="w-12 h-12 my-2 flex justify-center items-center text-2xl p-2 rounded-full bg-primary text-second"
+        <div class="w-full flex justify-center items-center">
+          <img :src="cardItem.img" class="rounded-4xl p-2" alt="" />
+        </div>
+        <div class="w-full flex justify-end items-center">
+          <RouterLink
+            to="/"
+            class="p-2 m-1 w-12 h-12 text-second rounded-full bg-primary flex justify-center items-center absolute hover:-rotate-25 hover:bg-second hover:text-primary transition-all"
           >
-            <ion-icon :name="cardItem.icon"></ion-icon>
-          </div>
-          <div>
-            <h1 class="text-primary text-2xl my-2">{{ cardItem.title }}</h1>
-            <p class="text-sm my-2 text-thirty/50">
-              {{ cardItem.desc }}
-            </p>
-          </div>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </RouterLink>
+        </div>
+        <div class="w-full p-2 m-2 text-left">
+          <h1 class="text-2xl font-bold m-1">{{ cardItem.title }}</h1>
+          <p class="m-1">
+            {{ cardItem.desc }}
+          </p>
         </div>
       </div>
-      <!-- Card End -->
+      <!-- card end  -->
     </div>
   </div>
   <!-- services end  -->
   <!-- sponsor start -->
   <SponsorUtil />
+
   <!-- about start  -->
   <div class="w-full flex justify-center md:flex-row flex-col">
     <!-- left side  -->
