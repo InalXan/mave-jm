@@ -13,13 +13,13 @@ const cardItems = ref([
   },
   {
     icon: 'compass',
-    img: new URL('@/assets/images/contents/home/tourist-visa.jpg', import.meta.url).href,
+    img: new URL('@/assets/images/contents/home/tourist-visa2.jpg', import.meta.url).href,
     title: 'Çalışma Vizesi Danışmanlığı',
     desc: 'Yurtdışında kariyer fırsatlarını keşfetmeniz için uzmanlıkla hazırlanmış danışmanlık hizmeti sunuyoruz.',
   },
   {
     icon: 'ticket',
-    img: new URL('@/assets/images/contents/home/tourist-visa.jpg', import.meta.url).href,
+    img: new URL('@/assets/images/contents/home/tourist-visa3.jpg', import.meta.url).href,
     title: 'Yurtdışı Eğitim Danışmanlığı ',
     desc: 'Uluslararası eğitim fırsatlarını araştırmanıza ve en uygun olanı bulmanıza yardımcı olmak için danışmanlık sağlıyoruz.',
   },
@@ -44,7 +44,7 @@ const cardItems = ref([
     <div class="w-full flex justify-around items-center gap-3 flex-wrap md:flex-nowrap">
       <!-- card start  -->
       <div
-        class="w-82 h-auto rounded-4xl shadow-xl border border-primary/80 m-2"
+        class="w-82 h-108 rounded-4xl shadow-xl border border-primary/80 m-2"
         v-for="cardItem in cardItems"
         :key="cardItem"
       >
