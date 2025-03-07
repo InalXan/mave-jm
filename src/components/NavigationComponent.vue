@@ -9,7 +9,13 @@ const menuItems = ref([
     submenu: [
       { name: 'Almanya', link: '/' },
       { name: 'İngiltere', link: '/' },
+      { name: 'Fransa', link: '/' },
+      {name: 'Amerika', link: '/'},
       { name: 'Belçika', link: '/' },
+      { name: 'Bulgaristan', link: '/' },
+      { name: 'Ispanya', link: '/' },
+      { name: 'Malta', link: '/' },
+      { name: 'Bulgaristan', link: '/' },
       { name: 'İtalya', link: '/' },
       { name: 'İrlanda', link: '/' },
       { name: 'Portekiz', link: '/' },
@@ -22,13 +28,12 @@ const menuItems = ref([
       { name: 'Litvanya', link: '/' },
       { name: 'Norveç', link: '/' },
       { name: 'Güney kore', link: '/' },
-      { name: 'Suudi Arabistan', link: '/' },
       { name: 'Danimarka', link: '/' },
       { name: 'Kanada', link: '/' },
     ],
   },
   { name: 'Nasıl vize alırım?', link: '/' },
-  { name: 'Blog', link: '/blog' },
+  // { name: 'Blog', link: '/blog' },
   {
     name: 'Diğer Bilgilendirmeler',
     link: '/',
@@ -48,15 +53,8 @@ const menuItems = ref([
     ],
   },
   { name: 'Başvuru yap', link: '/' },
-  {
-    name: 'Şubelerimiz',
-    link: '/',
-    submenu: [
-      { name: '1', link: '/' },
-      { name: '2', link: '/' },
-      { name: '3', link: '/' },
-    ],
-  },
+  { name: 'Kurumsal iletişim', link: '/corporative-contact' },
+
 ])
 
 const isMenuOpen = ref(false)
@@ -71,8 +69,8 @@ const toggleSubmenu = (index) => {
 </script>
 
 <template>
-  <div class="fixed top-0 w-full p-4 bg-second/50 backdrop-blur-md z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
+  <div class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/50 backdrop-blur-md z-50">
+    <div class="max-w-6xl mx-auto  flex justify-between items-center">
       <!-- Logo -->
       <div>
         <img src="@/assets/images/logo/logo.png" class="w-28" alt="Logo" />
@@ -113,9 +111,9 @@ const toggleSubmenu = (index) => {
     <!-- Mobile Mega Menu -->
     <div
       v-if="isMenuOpen"
-      class="md:hidden bg-second/50 backdrop-blur-md shadow-md p-4 absolute my-2 left-0 w-full"
+      class="md:hidden bg-second/50 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
-      <ul>
+      <ul class="overflow-scroll">
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">
           <div class="flex justify-between items-center">
             <RouterLink :to="menuItem.link" class="block">{{ menuItem.name }}</RouterLink>

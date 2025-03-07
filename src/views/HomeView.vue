@@ -71,7 +71,7 @@ const cardItems = ref([
   </div>
   <!-- services end  -->
   <!-- sponsor start -->
-  <SponsorUtil />
+  <!-- <SponsorUtil /> -->
 
   <!-- about start  -->
   <div class="w-full flex justify-center md:flex-row flex-col">
