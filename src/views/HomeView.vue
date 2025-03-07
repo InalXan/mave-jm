@@ -3,6 +3,7 @@ import IntroUtil from '@/utils/IntroUtil.vue'
 import FixedUtil from '@/utils/FixedUtil.vue'
 import SponsorUtil from '@/utils/SponsorUtil.vue'
 import FlagsUtil from '@/utils/FlagsUtil.vue'
+import VisasUtil from "@/utils/VisasUtil.vue"
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -82,9 +83,6 @@ const cardItems = ref([
           class="relative w-full h-92 rounded-xl bg-[url('@/assets/images/contents/home_about.jpg')] bg-center bg-cover shadow-md"
         >
           <div class="absolute m-2 border border-dashed border-primary w-full h-92"></div>
-        </div>
-        <div class="h-48 rounded-full bg-second">
-          <img src="@/assets/images/logo/logo.png" alt="" />
         </div>
       </div>
       <div class="flex flex-col justify-center items-center text-second">
@@ -197,4 +195,5 @@ const cardItems = ref([
     </div>
   </div>
   <!-- about end  -->
+  <VisasUtil/>
 </template>

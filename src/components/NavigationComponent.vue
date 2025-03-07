@@ -1,76 +1,6 @@
-<script setup>
-import { ref } from 'vue'
-
-const menuItems = ref([
-  { name: 'Ana Sayfa', link: '/' },
-  {
-    name: 'Hizmet verdiğimiz ülkeler',
-    link: '/',
-    submenu: [
-      { name: 'Almanya', link: '/' },
-      { name: 'İngiltere', link: '/' },
-      { name: 'Fransa', link: '/' },
-      {name: 'Amerika', link: '/'},
-      { name: 'Belçika', link: '/' },
-      { name: 'Bulgaristan', link: '/' },
-      { name: 'Ispanya', link: '/' },
-      { name: 'Malta', link: '/' },
-      { name: 'Bulgaristan', link: '/' },
-      { name: 'İtalya', link: '/' },
-      { name: 'İrlanda', link: '/' },
-      { name: 'Portekiz', link: '/' },
-      { name: 'Hollanda', link: '/' },
-      { name: 'Yunanistan', link: '/' },
-      { name: 'Polonya', link: '/' },
-      { name: 'Lüksemburg', link: '/' },
-      { name: 'Romanya', link: '/' },
-      { name: 'Estonya', link: '/' },
-      { name: 'Litvanya', link: '/' },
-      { name: 'Norveç', link: '/' },
-      { name: 'Güney kore', link: '/' },
-      { name: 'Danimarka', link: '/' },
-      { name: 'Kanada', link: '/' },
-    ],
-  },
-  { name: 'Nasıl vize alırım?', link: '/' },
-  // { name: 'Blog', link: '/blog' },
-  {
-    name: 'Diğer Bilgilendirmeler',
-    link: '/',
-    submenu: [
-      { name: 'Hakkımızda', link: '/about' },
-      { name: 'Vize tablosu', link: '/' },
-      { name: 'Marka kadrolarımız ve sözleşmelerimiz', link: '/' },
-      { name: 'Vize başvuru başarı oranları', link: '/about' },
-      { name: 'Sunduğumuz avantajlar', link: '/' },
-      { name: 'Garantili vize aldığımız ülkeler', link: '/' },
-      { name: 'Nasıl vize alırım ?', link: '/about' },
-      { name: 'Tırcı (Şöför) vizesi', link: '/' },
-      { name: 'Konsolsluk harçları', link: '/' },
-      { name: 'Yabancılara türkiyede oturum izni', link: '/about' },
-      { name: 'İletişim', link: '/' },
-      { name: 'Sıkca sorulan sorular', link: '/' },
-    ],
-  },
-  { name: 'Başvuru yap', link: '/' },
-  { name: 'Kurumsal iletişim', link: '/corporative-contact' },
-
-])
-
-const isMenuOpen = ref(false)
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
-
-const openSubmenus = ref({})
-const toggleSubmenu = (index) => {
-  openSubmenus.value[index] = !openSubmenus.value[index]
-}
-</script>
-
 <template>
   <div class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/50 backdrop-blur-md z-50">
-    <div class="max-w-6xl mx-auto  flex justify-between items-center">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div>
         <img src="@/assets/images/logo/logo.png" class="w-28" alt="Logo" />
@@ -113,7 +43,7 @@ const toggleSubmenu = (index) => {
       v-if="isMenuOpen"
       class="md:hidden bg-second/50 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
-      <ul class="overflow-scroll">
+      <ul class="overflow-y-auto max-h-[70vh]"> <!-- Kaydırma için max-height ve overflow-y ekledik -->
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">
           <div class="flex justify-between items-center">
             <RouterLink :to="menuItem.link" class="block">{{ menuItem.name }}</RouterLink>
@@ -139,6 +69,68 @@ const toggleSubmenu = (index) => {
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const menuItems = ref([
+  { name: 'Ana Sayfa', link: '/' },
+  {
+    name: 'Hizmet verdiğimiz ülkeler',
+    link: '/',
+    submenu: [
+      { name: 'Almanya', link: '/' },
+      { name: 'İngiltere', link: '/' },
+      { name: 'Fransa', link: '/' },
+      { name: 'Amerika', link: '/' },
+      { name: 'Belçika', link: '/' },
+      { name: 'Bulgaristan', link: '/' },
+      { name: 'Ispanya', link: '/' },
+      { name: 'Malta', link: '/' },
+      { name: 'Bulgaristan', link: '/' },
+      { name: 'İtalya', link: '/' },
+      { name: 'İrlanda', link: '/' },
+      { name: 'Portekiz', link: '/' },
+      { name: 'Hollanda', link: '/' },
+      { name: 'Yunanistan', link: '/' },
+      { name: 'Polonya', link: '/' },
+      { name: 'Lüksemburg', link: '/' },
+      { name: 'Romanya', link: '/' },
+      { name: 'Estonya', link: '/' },
+      { name: 'Litvanya', link: '/' },
+      { name: 'Norveç', link: '/' },
+      { name: 'Güney kore', link: '/' },
+      { name: 'Danimarka', link: '/' },
+      { name: 'Kanada', link: '/' },
+    ],
+  },
+  { name: 'Nasıl vize alırım?', link: '/' },
+  {
+    name: 'Diğer Bilgilendirmeler',
+    link: '/',
+    submenu: [
+      { name: 'Hakkımızda', link: '/about' },
+      { name: 'Sunduğumuz avantajlar', link: '/' },
+      { name: 'Nasıl vize alırım ?', link: '/about' },
+      { name: 'Tırcı (Şöför) vizesi', link: '/' },
+      { name: 'İletişim', link: '/' },
+      { name: 'Sıkca sorulan sorular', link: '/' },
+    ],
+  },
+  { name: 'Başvuru yap', link: '/' },
+  { name: 'Kurumsal iletişim', link: '/corporative-contact' },
+])
+
+const isMenuOpen = ref(false)
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const openSubmenus = ref({})
+const toggleSubmenu = (index) => {
+  openSubmenus.value[index] = !openSubmenus.value[index]
+}
+</script>
 
 <style scoped>
 /* Animasyon için ekstra stil */

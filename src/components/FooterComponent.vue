@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[url('@/assets/images/textures/world.png')] bg-primary bg-center bg-cover">
+  <footer class="bg-[url('@/assets/images/textures/world.png')] bg-primary bg-full bg-center bg-contain bg-no-repeat">
     <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
