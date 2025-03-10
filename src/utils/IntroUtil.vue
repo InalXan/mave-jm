@@ -1,3 +1,52 @@
+
+<style scoped>
+#intro {
+  background-color: #f5f5f5;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
+}
+</style>
+
 <template>
   <!-- intro start  -->
   <div id="intro" class="md:my-18 w-full flex justify-center items-center bg-second">
@@ -98,51 +147,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-#intro {
-  background-color: #f5f5f5;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px;
-}
-
-.swiper-pagination-bullet {
-  background-color: #fff;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #fff;
-  opacity: 1;
-}
-</style>

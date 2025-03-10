@@ -104,7 +104,7 @@ const menuItems = ref([
       { name: 'Kanada', link: '/' },
     ],
   },
-  { name: 'Nasıl vize alırım?', link: '/' },
+  { name: 'Nasıl vize alırım?', link: '/how-can-i-get-visa' },
   {
     name: 'Diğer Bilgilendirmeler',
     link: '/',
