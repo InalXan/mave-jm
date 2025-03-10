@@ -15,7 +15,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/contact',
+      path: '/corporation-feedback',
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
     },

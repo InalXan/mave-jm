@@ -118,7 +118,7 @@ const menuItems = ref([
     ],
   },
   { name: 'Başvuru yap', link: '/' },
-  { name: 'Kurumsal iletişim', link: '/corporative-contact' },
+  { name: 'Kurumsal iletişim', link: '/corporation-feedback' },
 ])
 
 const isMenuOpen = ref(false)
