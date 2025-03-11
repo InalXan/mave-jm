@@ -11,21 +11,19 @@ import FixedUtil from '@/utils/FixedUtil.vue';
               <div class="w-full flex justify-center items-center">
                 <img src="@/assets/images/about/about.png" alt="">
               </div>
-                <h4 class="text-lg font-semibold tracking-wide uppercase">Hizmet Başvuru</h4>
-                <h2 class="text-4xl font-bold mt-2">mave</h2>
-                <h1 class="text-5xl font-extrabold mt-4 leading-snug">Formu doldurarak <br> hayallerinize bir adım daha yaklaşın</h1>
-                <div class="w-24 h-1 bg-second my-6"></div>
-                <h2 class="text-2xl font-semibold">VISA</h2>
-                <div class="mt-6 bg-second p-6 rounded-lg shadow-lg text-gray-900">
+                <h4 class="text-lg font-semibold tracking-wide uppercase">Formu doldurarak hayallerinize bir adim daha</h4>
+                <h2 class="text-4xl font-bold mt-2">yaklasin</h2>
+                <div class="w-24 h-1 bg-primary my-6"></div>
+                <div class="mt-6 bg-primary p-6 rounded-lg shadow-lg text-second">
                     <h3 class="text-xl font-semibold">İletişim Bilgileri</h3>
                     <ul class="mt-4 space-y-2">
                         <li class="flex items-center gap-2">
-                            <span class="font-bold">Telefon Numarası:</span>
-                            <a href="tel:324212312334" class="text-primary/80 hover:underline">+234234324234</a>
+                            <span class="font-bold"><ion-icon name="call"></ion-icon> Telefon Numarası:</span>
+                            <a href="tel:324212312334" class="text-second hover:underline">+234234324234</a>
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="font-bold">Email:</span>
-                            <a href="mailto:info@mave-jm.com" class="text-primary/80 hover:underline">info@mave-jm.com</a>
+                            <span class="font-bold"><ion-icon name="mail"></ion-icon> Email:</span>
+                            <a href="mailto:info@mave-jm.com" class="text-second hover:underline">info@mave-jm.com</a>
                         </li>
                     </ul>
                 </div>
@@ -139,3 +137,9 @@ import FixedUtil from '@/utils/FixedUtil.vue';
         </div>
     </section>
 </template>
+
+<style scoped>
+input, select, option, textarea {
+  border: 2px solid #a86332;
+}
+</style>
