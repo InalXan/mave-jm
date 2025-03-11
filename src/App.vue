@@ -12,7 +12,7 @@ setTimeout(() => {
 </script>
 <template>
   <RouterView />
-  <CookieUtil/>
+  <CookieUtil />
   <FooterComponent />
   <LoaderComponent v-if="isLoading" />
 </template>

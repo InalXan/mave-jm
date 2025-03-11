@@ -1,5 +1,7 @@
 <template>
-  <div class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/50 backdrop-blur-md z-50">
+  <div
+    class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/50 backdrop-blur-md z-50"
+  >
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div>
@@ -17,7 +19,7 @@
           </RouterLink>
           <div
             v-if="menuItem.submenu"
-            class="absolute left-0 mt-2 bg-second/50 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
+            class="absolute left-0 mt-2 bg-second/90 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
           >
             <ul>
               <li
@@ -43,7 +45,8 @@
       v-if="isMenuOpen"
       class="md:hidden bg-second/80 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
-      <ul class="overflow-y-auto max-h-[70vh]"> <!-- Kaydırma için max-height ve overflow-y ekledik -->
+      <ul class="overflow-y-auto max-h-[70vh]">
+        <!-- Kaydırma için max-height ve overflow-y ekledik -->
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">
           <div class="flex justify-between items-center">
             <RouterLink :to="menuItem.link" class="block">{{ menuItem.name }}</RouterLink>

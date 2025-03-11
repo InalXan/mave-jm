@@ -1,5 +1,7 @@
 <template>
-  <footer class="bg-[url('@/assets/images/textures/world.png')] bg-second border-t-2 border-primary bg-full bg-center bg-contain bg-no-repeat">
+  <footer
+    class="bg-[url('@/assets/images/textures/world.png')] bg-second border-t-2 border-primary bg-full bg-center bg-contain bg-no-repeat"
+  >
     <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
@@ -7,7 +9,9 @@
             <img src="@/assets/images/logo/logo.png" class="w-24" alt="" />
           </div>
 
-          <p class="mt-6 max-w-md text-center leading-relaxed text-primary sm:max-w-xs sm:text-left">
+          <p
+            class="mt-6 max-w-md text-center leading-relaxed text-primary sm:max-w-xs sm:text-left"
+          >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet
             culpa cum itaque neque.
           </p>

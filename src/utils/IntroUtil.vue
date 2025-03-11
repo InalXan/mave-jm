@@ -1,8 +1,11 @@
 <template>
   <!-- Hero Section -->
-  <div id="hero" class="relative bg-primary w-full h-auto flex justify-center items-center overflow-hidden">
+  <div
+    id="hero"
+    class="relative sm:bg-primary bg-second w-full h-auto flex justify-center items-center overflow-hidden"
+  >
     <swiper
-      :autoplay="{ delay: 4000, disableOnInteraction: false }"
+      :autoplay="{ delay: 3000, disableOnInteraction: false }"
       :navigation="true"
       :pagination="{ clickable: true, dynamicBullets: true }"
       :loop="true"
@@ -11,21 +14,26 @@
       class="w-full max-w-6xl m-32"
     >
       <swiper-slide
-        v-for="slide in slides"
-        :key="slide"
-        class="flex flex-col md:flex-row items-center justify-center bg-second p-8 md:p-16 rounded-3xl shadow-2xl transform transition-all min-h-[500px] md:min-h-[600px]"
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="flex flex-col md:flex-row items-center justify-center bg-second/50 backdrop-blur-md  p-8 md:p-16 rounded-3xl shadow-2xl transform transition-all min-h-[500px] md:min-h-[600px]"
       >
         <!-- Left Side -->
-        <div class="text-gray-900 flex flex-col items-center md:items-start text-center md:text-left max-w-lg mb-8 md:mb-0">
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">{{ slide.title }}</h1>
+        <div
+          class="text-gray-900 flex select-none flex-col items-center md:items-start text-center md:text-left max-w-lg mb-8 md:mb-0"
+        >
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+            {{ slide.title }}
+          </h1>
           <p class="text-lg md:text-xl text-gray-700 mt-4 md:mt-6">{{ slide.description }}</p>
           <div class="mt-6 md:mt-8 flex flex-col md:flex-row gap-4 md:gap-6">
             <RouterLink
-              class="px-6 py-3 md:px-8 md:py-4 border border-primary rounded-full text-primary transition-all hover:bg-cyan-600 hover:text-white shadow-lg text-lg"
+              class="px-6 py-3 md:px-8 md:py-4 border border-primary rounded-full text-primary transition-all hover:bg-primary hover:text-second shadow-lg text-lg"
               to="/how-can-i-get-visa"
-            >Daha Fazla →</RouterLink>
+              >Daha Fazla →</RouterLink
+            >
             <RouterLink
-              class="px-6 py-3 md:px-8 md:py-4 bg-primary text-second rounded-full flex items-center justify-center transition-all hover:bg-blue-500 shadow-lg text-lg"
+              class="px-6 py-3 md:px-8 md:py-4 bg-primary text-second rounded-full flex items-center justify-center transition-all hover:bg-second hover:text-primary shadow-lg text-lg"
               to="/order-visa"
             >
               <ion-icon name="arrow-forward-outline" class="mr-2"></ion-icon>
@@ -34,9 +42,10 @@
           </div>
         </div>
         <!-- Right Side -->
-        <div class="relative w-full flex md:w-[450px] h-[400px] md:h-[450px] bg-cover bg-center rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105"
-          :style="{ backgroundImage: `url(${slide.image})` }">
-        </div>
+        <div
+          class="relative sm:flex hidden w-full md:w-[450px] h-[400px] md:h-[450px] bg-cover bg-center rounded-2xl overflow-hidden transform transition duration-500 hover:scale-105"
+          :style="{ backgroundImage: `url(${slide.image})` }"
+        ></div>
       </swiper-slide>
     </swiper>
   </div>
@@ -80,16 +89,18 @@ const modules = [Navigation, Pagination, Autoplay, EffectFade]
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #fff;
   border-radius: 24px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.swiper-slide div {
+  background-size: cover;
+  background-position: center;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -104,7 +115,7 @@ const modules = [Navigation, Pagination, Autoplay, EffectFade]
 }
 
 .swiper-pagination-bullet-active {
-  background: #06b6d4;
+  background: #a86332;
   opacity: 1;
 }
 
@@ -112,7 +123,7 @@ const modules = [Navigation, Pagination, Autoplay, EffectFade]
   .swiper-slide {
     flex-direction: column;
     padding: 16px;
-    min-height: auto; /* Mobilde yüksekliği otomatik ayarla */
+    min-height: auto;
   }
 
   .swiper-button-next,

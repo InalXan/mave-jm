@@ -3,7 +3,7 @@ import IntroUtil from '@/utils/IntroUtil.vue'
 import FixedUtil from '@/utils/FixedUtil.vue'
 import SponsorUtil from '@/utils/SponsorUtil.vue'
 import FlagsUtil from '@/utils/FlagsUtil.vue'
-import VisasUtil from "@/utils/VisasUtil.vue"
+import VisasUtil from '@/utils/VisasUtil.vue'
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -54,7 +54,7 @@ const cardItems = ref([
         </div>
         <div class="w-full flex justify-end items-center">
           <RouterLink
-            to="/"
+            to="/order-visa"
             class="p-2 m-1 w-12 h-12 text-second rounded-full bg-primary flex justify-center items-center absolute hover:-rotate-25 hover:bg-second hover:text-primary transition-all"
           >
             <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -173,9 +173,9 @@ const cardItems = ref([
         <!-- contact btns  -->
         <div class="w-full flex justify-start items-center">
           <RouterLink
-            to="/"
-            class="flex justify-center items-center p-4 rounded-full my-5 mx-5 border border-primary"
-            >Read More <ion-icon name="arrow-forward-sharp"></ion-icon
+            to="avantajlar"
+            class="flex justify-center items-center p-4 rounded-full my-5 mx-5 border border-primary text-primary hover:bg-primary hover:text-second transition-all"
+            >Avantajlarimiz <ion-icon name="arrow-forward-sharp"></ion-icon
           ></RouterLink>
           <a href="" class="flex justify-center items-center"
             ><div>
@@ -195,5 +195,5 @@ const cardItems = ref([
     </div>
   </div>
   <!-- about end  -->
-  <VisasUtil/>
+  <VisasUtil />
 </template>
