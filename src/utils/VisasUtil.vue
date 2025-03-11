@@ -12,11 +12,48 @@
     }"
     :navigation="true"
     :modules="modules"
-    class="mySwiper"
+    class="w-64"
   >
     <swiper-slide class="w-64">
     	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
     </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
+    <swiper-slide class="w-64">
+    	<img src="@/assets/images/visa/visa.jpg" class="w-64" alt="">
+    </swiper-slide>
+
   </swiper>
 </div>
 </template>

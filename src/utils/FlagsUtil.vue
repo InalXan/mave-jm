@@ -1,5 +1,5 @@
 <template>
-  <div class="relative font-inter antialiased">
+  <div class="relative font-inter antialiased py-16">
     <main class="relative flex flex-col justify-center overflow-hidden">
       <div class="w-full max-w-5xl mx-auto px-4 py-5 md:px-6">
         <div class="text-center">

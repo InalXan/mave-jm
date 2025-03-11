@@ -75,7 +75,7 @@ const cardItems = ref([
   <!-- <SponsorUtil /> -->
 
   <!-- about start  -->
-  <div class="w-full flex justify-center md:flex-row flex-col">
+  <div class="w-full flex py-16 justify-center md:flex-row flex-col">
     <!-- left side  -->
     <div class="w-full md:w-1/2 flex items-center justify-center flex-row">
       <div class="w-full h-full flex flex-col">

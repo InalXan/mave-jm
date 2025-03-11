@@ -1,28 +1,95 @@
+<template>
+  <!-- Hero Section -->
+  <div id="hero" class="relative bg-primary w-full h-auto flex justify-center items-center overflow-hidden">
+    <swiper
+      :autoplay="{ delay: 4000, disableOnInteraction: false }"
+      :navigation="true"
+      :pagination="{ clickable: true, dynamicBullets: true }"
+      :loop="true"
+      :effect="'fade'"
+      :modules="modules"
+      class="w-full max-w-6xl m-32"
+    >
+      <swiper-slide
+        v-for="slide in slides"
+        :key="slide"
+        class="flex flex-col md:flex-row items-center justify-center bg-second p-8 md:p-16 rounded-3xl shadow-2xl transform transition-all min-h-[500px] md:min-h-[600px]"
+      >
+        <!-- Left Side -->
+        <div class="text-gray-900 flex flex-col items-center md:items-start text-center md:text-left max-w-lg mb-8 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">{{ slide.title }}</h1>
+          <p class="text-lg md:text-xl text-gray-700 mt-4 md:mt-6">{{ slide.description }}</p>
+          <div class="mt-6 md:mt-8 flex flex-col md:flex-row gap-4 md:gap-6">
+            <RouterLink
+              class="px-6 py-3 md:px-8 md:py-4 border border-primary rounded-full text-primary transition-all hover:bg-cyan-600 hover:text-white shadow-lg text-lg"
+              to="/how-can-i-get-visa"
+            >Daha Fazla →</RouterLink>
+            <RouterLink
+              class="px-6 py-3 md:px-8 md:py-4 bg-primary text-second rounded-full flex items-center justify-center transition-all hover:bg-blue-500 shadow-lg text-lg"
+              to="/order-visa"
+            >
+              <ion-icon name="arrow-forward-outline" class="mr-2"></ion-icon>
+              {{ slide.buttonText }}
+            </RouterLink>
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div class="relative w-full flex md:w-[450px] h-[400px] md:h-[450px] bg-cover bg-center rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105"
+          :style="{ backgroundImage: `url(${slide.image})` }">
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
+</template>
+
+<script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-fade'
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
+
+const slides = [
+  {
+    title: 'Hayallerinizi Gerçeğe Dönüştürün',
+    description: 'Seyahat etmek hiç bu kadar kolay olmamıştı. Yeni deneyimlere hazır olun!',
+    buttonText: 'Hemen Katıl',
+    image: new URL('@/assets/images/intro/intro_image.png', import.meta.url).href,
+  },
+  {
+    title: 'Vize İşlemleri Artık Çok Daha Kolay',
+    description: 'Hızlı ve güvenilir vize çözümleriyle dünyayı keşfedin.',
+    buttonText: 'Başvur',
+    image: new URL('@/assets/images/intro/intro_image1.png', import.meta.url).href,
+  },
+  {
+    title: 'Keşfet, Öğren, Büyü',
+    description: 'Dünyanın dört bir yanına seyahat ederek en guzel yerlerde hayatını zenginleştir.',
+    buttonText: 'Keşfet',
+    image: new URL('@/assets/images/intro/intro_image2.png', import.meta.url).href,
+  },
+]
+
+const modules = [Navigation, Pagination, Autoplay, EffectFade]
+</script>
 
 <style scoped>
-#intro {
-  background-color: #f5f5f5;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -36,114 +103,27 @@
   font-size: 20px;
 }
 
-.swiper-pagination-bullet {
-  background-color: #fff;
-  opacity: 0.5;
-}
-
 .swiper-pagination-bullet-active {
-  background-color: #fff;
+  background: #06b6d4;
   opacity: 1;
 }
-</style>
 
-<template>
-  <!-- intro start  -->
-  <div id="intro" class="md:my-18 w-full flex justify-center items-center bg-second">
-    <swiper
-      :cssMode="true"
-      :navigation="true"
-      :pagination="true"
-      :mousewheel="true"
-      :keyboard="true"
-      :modules="modules"
-      class="flex justify-center items-center w-full"
-    >
-      <swiper-slide
-        v-for="(slide, index) in slides"
-        :key="index"
-        class="flex justify-center items-center sm:flex-row flex-col w-full max-w-[98%] rounded-4xl md:h-[60vh] min-h-[60vh]"
-      >
-        <div
-          class="flex justify-center items-center shadow-2xl sm:flex-row flex-col w-full max-w-[98%] my-18 mx-5 rounded-4xl md:h-[60vh] min-h-[60vh] gap-8 bg-primary bg-[url('@/assets/images/textures/intro/intro.png')] bg-center bg-cover"
-        >
-          <!-- left side  -->
-          <div class="text-second flex flex-col justify-center items-center sm:items-start">
-            <div>
-              <h1
-                class="text-4xl w-72 select-none my-10 mx-10 text-left tracking-widest leading-11"
-              >
-                {{ slide.title }}
-              </h1>
-            </div>
-            <!-- buttons  -->
-            <div class="flex justify-around w-full sm:w-auto">
-              <RouterLink
-                class="p-4 border border-second rounded-full transition-all hover:bg-primary hover:text-second"
-                to="/"
-                >Daha fazla -></RouterLink
-              >
-              <RouterLink
-                class="p-4 rounded-full flex items-center justify-center transition-all bg-second text-primary hover:bg-primary hover:text-second"
-                to="/"
-              >
-                <ion-icon name="arrow-forward-outline"></ion-icon> {{ slide.buttonText }}</RouterLink
-              >
-            </div>
-          </div>
-          <!-- right side  -->
-          <div class="flex items-end h-full">
-            <div
-              class="w-82 h-96 bg-[url('@/assets/images/textures/intro/intro_image.png')] bg-center bg-cover"
-            ></div>
-          </div>
-        </div>
-      </swiper-slide>
-    </swiper>
-  </div>
-</template>
+@media (max-width: 768px) {
+  .swiper-slide {
+    flex-direction: column;
+    padding: 16px;
+    min-height: auto; /* Mobilde yüksekliği otomatik ayarla */
+  }
 
-<script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue'
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
 
-// Import Swiper styles
-import 'swiper/css'
-
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-// import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules'
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const slides = [
-      {
-        title: 'Hayatınızda Yeni Başlangıçlar Yapmanın Tam Zamanı',
-        buttonText: 'Hemen Başvur',
-        image: 'intro_image.png',
-      },
-      {
-        title: 'Vize almak bu kadar kolay olmamıştı',
-        buttonText: 'Hemen Başvur',
-        image: 'intro_image2.png',
-      },
-      {
-        title: 'Hayallerinizi Gezerek Yaşayın',
-        buttonText: 'Order',
-        image: 'intro_image3.png',
-      },
-    ]
-
-    return {
-      modules: [Navigation, Pagination, Mousewheel, Keyboard],
-      slides,
-    }
-  },
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px;
+  }
 }
-</script>
+</style>

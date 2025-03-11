@@ -8,7 +8,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
         <h4 class="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">How can i get visa?</h4>
         <p class="text-center text-gray-600 text-sm mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-12 px-2 xl:px-12 mt-4">
-            <div class="flex space-x-8 mt-8">
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
@@ -22,8 +22,8 @@ import FixedUtil from '@/utils/FixedUtil.vue';
                     <a href="#" class="text-primary/70 hover:text-primary hover:underline capitalize" title="Read More">Daha fazla</a>
                 </div>
             </div>
-            
-            <div class="flex space-x-8 mt-8">
+
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -36,7 +36,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
                 </div>
             </div>
 
-            <div class="flex space-x-8 mt-8">
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
@@ -49,7 +49,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
                 </div>
             </div>
 
-            <div class="flex space-x-8 mt-8">
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
@@ -62,7 +62,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
                 </div>
             </div>
 
-            <div class="flex space-x-8 mt-8">
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
@@ -75,7 +75,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
                 </div>
             </div>
 
-            <div class="flex space-x-8 mt-8">
+            <div class="flex flex-col space-x-8 mt-8">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>

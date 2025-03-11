@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showCookieBanner" class="fixed bottom-0 z-50 left-0 w-full bg-white border-t border-gray-200 shadow">
+    <div v-if="showCookieBanner" class="fixed bottom-10 z-50 left-0 w-full bg-white border-t border-gray-200 shadow">
       <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <p class="text-sm text-gray-700">
           We use cookies to ensure you get the best experience on our website.
@@ -12,7 +12,7 @@
       </div>
     </div>
   </template>
-  
+
   <script>
   export default {
     data() {
