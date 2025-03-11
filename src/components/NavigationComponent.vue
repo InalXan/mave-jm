@@ -1,33 +1,33 @@
 <template>
   <div
-    class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/50 backdrop-blur-md z-50"
+    class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-white/80 backdrop-blur-md shadow-sm z-50"
   >
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <div class="max-w-6xl w-full mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div>
         <img src="@/assets/images/logo/logo.png" class="w-28" alt="Logo" />
       </div>
 
       <!-- Mega Menu -->
-      <nav class="hidden md:flex">
+      <nav class="hidden md:flex space-x-4">
         <div v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="relative group">
           <RouterLink
             :to="menuItem.link"
-            class="uppercase text-sm p-2 hover:bg-primary hover:text-second transition-all rounded-lg"
+            class="uppercase text-sm p-2 hover:bg-primary hover:text-white transition-all duration-300 rounded-lg"
           >
             {{ menuItem.name }}
           </RouterLink>
           <div
             v-if="menuItem.submenu"
-            class="absolute left-0 mt-2 bg-second/90 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
+            class="absolute left-0 mt-2 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
           >
             <ul>
               <li
                 v-for="sub in menuItem.submenu"
                 :key="sub.name"
-                class="p-2 w-92 hover:bg-gray-200 rounded-md"
+                class="p-2 w-92 hover:bg-gray-100 rounded-md transition-all duration-200"
               >
-                <RouterLink :to="sub.link">{{ sub.name }}</RouterLink>
+                <RouterLink :to="sub.link" class="block">{{ sub.name }}</RouterLink>
               </li>
             </ul>
           </div>
@@ -35,7 +35,10 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button @click="toggleMenu" class="md:hidden px-4 py-2 bg-primary text-second rounded-lg">
+      <button
+        @click="toggleMenu"
+        class="md:hidden px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all"
+      >
         ☰
       </button>
     </div>
@@ -43,14 +46,17 @@
     <!-- Mobile Mega Menu -->
     <div
       v-if="isMenuOpen"
-      class="md:hidden bg-second/80 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
+      class="md:hidden bg-white/95 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
       <ul class="overflow-y-auto max-h-[70vh]">
-        <!-- Kaydırma için max-height ve overflow-y ekledik -->
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">
           <div class="flex justify-between items-center">
-            <RouterLink :to="menuItem.link" class="block">{{ menuItem.name }}</RouterLink>
-            <button v-if="menuItem.submenu" @click="toggleSubmenu(index)" class="p-2">
+            <RouterLink :to="menuItem.link" class="block text-gray-700 hover:text-primary">{{ menuItem.name }}</RouterLink>
+            <button
+              v-if="menuItem.submenu"
+              @click="toggleSubmenu(index)"
+              class="p-2 text-gray-500 hover:text-primary"
+            >
               {{ openSubmenus[index] ? '▲' : '▼' }}
             </button>
           </div>
@@ -63,7 +69,7 @@
           >
             <ul class="pl-4 mt-2">
               <li v-for="sub in menuItem.submenu" :key="sub.name" class="p-1">
-                <RouterLink :to="sub.link" class="block">{{ sub.name }}</RouterLink>
+                <RouterLink :to="sub.link" class="block text-gray-600 hover:text-primary">{{ sub.name }}</RouterLink>
               </li>
             </ul>
           </div>
@@ -79,7 +85,7 @@ import { ref } from 'vue'
 const menuItems = ref([
   { name: 'Ana Sayfa', link: '/' },
   {
-    name: 'Hizmet verdiğimiz ülkeler',
+    name: 'Hizmet Verdiğimiz Ülkeler',
     link: '/',
     submenu: [
       { name: 'Almanya', link: '/' },
@@ -88,9 +94,8 @@ const menuItems = ref([
       { name: 'Amerika', link: '/' },
       { name: 'Belçika', link: '/' },
       { name: 'Bulgaristan', link: '/' },
-      { name: 'Ispanya', link: '/' },
+      { name: 'İspanya', link: '/' },
       { name: 'Malta', link: '/' },
-      { name: 'Bulgaristan', link: '/' },
       { name: 'İtalya', link: '/' },
       { name: 'İrlanda', link: '/' },
       { name: 'Portekiz', link: '/' },
@@ -102,25 +107,25 @@ const menuItems = ref([
       { name: 'Estonya', link: '/' },
       { name: 'Litvanya', link: '/' },
       { name: 'Norveç', link: '/' },
-      { name: 'Güney kore', link: '/' },
+      { name: 'Güney Kore', link: '/' },
       { name: 'Danimarka', link: '/' },
       { name: 'Kanada', link: '/' },
     ],
   },
-  { name: 'Nasıl vize alırım?', link: '/how-can-i-get-visa' },
+  { name: 'Nasıl Vize Alırım?', link: '/how-can-i-get-visa' },
   {
     name: 'Diğer Bilgilendirmeler',
     link: '/',
     submenu: [
       { name: 'Hakkımızda', link: '/about' },
-      { name: 'Sunduğumuz avantajlar', link: '/advantages' },
-      { name: 'Nasıl vize alırım ?', link: '/how-can-i-get-visa' },
-      { name: 'Tırcı (Şöför) vizesi', link: '/' },
-      { name: 'Sıkca sorulan sorular', link: '/favorite-questions' },
+      { name: 'Sunduğumuz Avantajlar', link: '/advantages' },
+      { name: 'Nasıl Vize Alırım?', link: '/how-can-i-get-visa' },
+      { name: 'Tır Şoförü Vizesi', link: '/truck-visa' },
+      { name: 'Sıkça Sorulan Sorular', link: '/favorite-questions' },
     ],
   },
-  { name: 'Başvuru yap', link: '/order-visa' },
-  { name: 'Kurumsal iletişim', link: '/corporation-feedback' },
+  { name: 'Başvuru Yap', link: '/order-visa' },
+  { name: 'Kurumsal İletişim', link: '/corporation-feedback' },
 ])
 
 const isMenuOpen = ref(false)
