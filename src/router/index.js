@@ -19,10 +19,28 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
     },
+
+    {
+      path: '/favorite-questions',
+      name: 'questions',
+      component: () => import('../views/QuestionsView.vue'),
+    },
+
+    {
+      path: '/advantages',
+      name: 'Advantages',
+      component: () => import('../views/AdvantagesView.vue'),
+    },
     {
       path: '/how-can-i-get-visa',
       name: 'howcanigetvisa',
       component: () => import('../views/HowgetvisaView.vue'),
+    },
+
+    {
+      path: '/order-visa',
+      name: 'order',
+      component: () => import('../views/OrderView.vue'),
     },
   ],
 })

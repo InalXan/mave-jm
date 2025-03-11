@@ -41,7 +41,7 @@
     <!-- Mobile Mega Menu -->
     <div
       v-if="isMenuOpen"
-      class="md:hidden bg-second/50 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
+      class="md:hidden bg-second/80 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
       <ul class="overflow-y-auto max-h-[70vh]"> <!-- Kaydırma için max-height ve overflow-y ekledik -->
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">
@@ -110,14 +110,13 @@ const menuItems = ref([
     link: '/',
     submenu: [
       { name: 'Hakkımızda', link: '/about' },
-      { name: 'Sunduğumuz avantajlar', link: '/' },
-      { name: 'Nasıl vize alırım ?', link: '/about' },
+      { name: 'Sunduğumuz avantajlar', link: '/advantages' },
+      { name: 'Nasıl vize alırım ?', link: '/how-can-i-get-visa' },
       { name: 'Tırcı (Şöför) vizesi', link: '/' },
-      { name: 'İletişim', link: '/' },
-      { name: 'Sıkca sorulan sorular', link: '/' },
+      { name: 'Sıkca sorulan sorular', link: '/favorite-questions' },
     ],
   },
-  { name: 'Başvuru yap', link: '/' },
+  { name: 'Başvuru yap', link: '/order-visa' },
   { name: 'Kurumsal iletişim', link: '/corporation-feedback' },
 ])
 

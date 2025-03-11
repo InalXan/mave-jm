@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import LoaderComponent from './components/LoaderComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import CookieUtil from './utils/CookieUtil.vue'
 import { ref } from 'vue'
 const isLoading = ref(true)
 
@@ -11,6 +12,7 @@ setTimeout(() => {
 </script>
 <template>
   <RouterView />
+  <CookieUtil/>
   <FooterComponent />
   <LoaderComponent v-if="isLoading" />
 </template>
