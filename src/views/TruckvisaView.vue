@@ -1,5 +1,6 @@
 <script setup>
 import FixedUtil from '@/utils/FixedUtil.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 </script>
 <template>
   <FixedUtil/>
@@ -27,4 +28,7 @@ import FixedUtil from '@/utils/FixedUtil.vue';
       </div>
   </div>
 </div>
+
+  <!-- footer  -->
+  <FooterComponent/>
 </template>

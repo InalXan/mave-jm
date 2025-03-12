@@ -1,7 +1,8 @@
 <script setup>
 import IntroUtil from '@/utils/IntroUtil.vue'
 import FixedUtil from '@/utils/FixedUtil.vue'
-import SponsorUtil from '@/utils/SponsorUtil.vue'
+// import SponsorUtil from '@/utils/SponsorUtil.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 import FlagsUtil from '@/utils/FlagsUtil.vue'
 import VisasUtil from '@/utils/VisasUtil.vue'
 import { ref } from 'vue'
@@ -196,4 +197,7 @@ const cardItems = ref([
   </div>
   <!-- about end  -->
   <VisasUtil />
+
+  <!-- footer  -->
+  <FooterComponent/>
 </template>

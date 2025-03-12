@@ -47,6 +47,19 @@ const router = createRouter({
       name: 'order',
       component: () => import('../views/OrderView.vue'),
     },
+    //admin panel authentication
+
+    {
+      path: '/mave/admin/login',
+      name: 'admin-login',
+      component: () => import('../views/admin/LoginView.vue'),
+    },
+    // admin panel pages
+    {
+      path: '/mave/admin/profile',
+      name: 'admin-profile',
+      component: () => import('../views/admin/ProfileView.vue'),
+    },
 
   ],
 })
