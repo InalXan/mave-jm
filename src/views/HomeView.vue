@@ -5,6 +5,7 @@ import FixedUtil from '@/utils/FixedUtil.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import FlagsUtil from '@/utils/FlagsUtil.vue'
 import VisasUtil from '@/utils/VisasUtil.vue'
+import VisitMiddleware from '@/middleware/VisitMiddleware.vue'
 import { ref } from 'vue'
 const cardItems = ref([
   {
@@ -72,6 +73,7 @@ const cardItems = ref([
     </div>
   </div>
   <!-- services end  -->
+   <VisitMiddleware/>
   <!-- sponsor start -->
   <!-- <SponsorUtil /> -->
 

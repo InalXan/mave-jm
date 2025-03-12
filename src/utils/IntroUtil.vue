@@ -2,7 +2,7 @@
   <!-- Hero Section -->
   <div
     id="hero"
-    class="relative sm:bg-primary bg-second w-full h-auto flex justify-center items-center overflow-hidden"
+    class="relative bg-[url('@/assets/images/intro/intro.jpg')] bg-center bg-cover w-full h-auto flex justify-center items-center overflow-hidden"
   >
     <swiper
       :autoplay="{ delay: 3000, disableOnInteraction: false }"
@@ -11,7 +11,7 @@
       :loop="true"
       :effect="'fade'"
       :modules="modules"
-      class="w-full max-w-6xl m-32"
+      class="w-full max-w-6xl m-32 rounded-3xl"
     >
       <swiper-slide
         v-for="(slide, index) in slides"

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-white/80 backdrop-blur-md shadow-sm z-50"
+    class="fixed top-0 w-full h-28 flex justify-around items-center p-4 bg-second/60 backdrop-blur-md shadow-sm z-50"
   >
     <div class="max-w-6xl w-full mx-auto flex justify-between items-center">
       <!-- Logo -->
