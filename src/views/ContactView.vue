@@ -48,7 +48,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
             type="email"
             id="email"
             name="email"
-            class="w-full bg-white rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-primary py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            class="w-full bg-second rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-primary py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
         <div class="relative mb-4">
@@ -56,7 +56,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
           <textarea
             id="message"
             name="message"
-            class="w-full bg-white rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-primary py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            class="w-full bg-second rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-primary py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
         <button

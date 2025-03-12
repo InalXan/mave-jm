@@ -13,13 +13,13 @@
         <div v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="relative group">
           <RouterLink
             :to="menuItem.link"
-            class="uppercase text-sm p-2 hover:bg-primary hover:text-white transition-all duration-300 rounded-lg"
+            class="uppercase text-sm p-2 hover:bg-primary hover:text-second transition-all duration-300 rounded-lg"
           >
             {{ menuItem.name }}
           </RouterLink>
           <div
             v-if="menuItem.submenu"
-            class="absolute left-0 mt-2 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
+            class="absolute left-0 mt-2 bg-second/90 backdrop-blur-md shadow-lg rounded-lg p-4 hidden group-hover:block"
           >
             <ul>
               <li
@@ -37,7 +37,7 @@
       <!-- Mobile Menu Button -->
       <button
         @click="toggleMenu"
-        class="md:hidden px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all"
+        class="md:hidden px-4 py-2 bg-primary text-second rounded-lg hover:bg-primary/90 transition-all"
       >
         ☰
       </button>
@@ -46,7 +46,7 @@
     <!-- Mobile Mega Menu -->
     <div
       v-if="isMenuOpen"
-      class="md:hidden bg-white/95 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
+      class="md:hidden bg-second/95 backdrop-blur-md shadow-md p-4 absolute top-28 left-0 w-full"
     >
       <ul class="overflow-y-auto max-h-[70vh]">
         <li v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="p-2 border-b">

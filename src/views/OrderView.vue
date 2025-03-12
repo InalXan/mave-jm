@@ -5,12 +5,12 @@ import FooterComponent from '@/components/FooterComponent.vue';
 
 <template>
   <FixedUtil />
-  <section class="bg-second text-primary py-36 relative">
-    <div class="container mx-auto px-6 max-w-6xl flex flex-wrap justify-between">
+  <section class="bg-[url('@/assets/images/order/bg.jpg')] bg-center bg-cover text-primary py-36 relative">
+    <div class="container mx-auto rounded-3xl bg-second/70 backdrop-blur-md px-6 max-w-6xl flex flex-wrap justify-between">
       <!-- Left Section -->
       <div class="w-full lg:w-1/2 p-8 text-center lg:text-left">
         <div class="w-full flex justify-center items-center">
-          <img src="@/assets/images/about/about.png" alt="" />
+          <img src="@/assets/images/about/about.png" class="rounded-3xl my-5" alt="" />
         </div>
         <h4 class="text-lg font-semibold tracking-wide uppercase">
           Formu doldurarak hayallerinize bir adim daha
@@ -35,7 +35,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
       </div>
 
       <!-- Form Section -->
-      <div class="w-full lg:w-1/2 bg-second p-10 rounded-2xl shadow-2xl text-gray-900">
+      <div class="w-full lg:w-1/2 p-10  text-gray-900">
         <form class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
