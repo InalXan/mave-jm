@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
-    "axios": "^1.8.2",
+    "axios": "^1.8.3",
+    "config": "^3.3.12",
+    "express-validator": "^7.2.1",
     "swiper": "^11.2.4",
     "tailwindcss": "^4.0.9",
     "vue": "^3.5.13",

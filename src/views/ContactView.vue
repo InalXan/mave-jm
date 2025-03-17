@@ -1,6 +1,39 @@
 <script setup>
-import FixedUtil from '@/utils/FixedUtil.vue'
+import { ref } from "vue";
+import { sendMessage } from "@/api/useMessage";
+import FixedUtil from '@/utils/FixedUtil.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+
+// Form verileri
+const form = ref({
+  name: "",
+  number: "",
+  email: "",
+  message: "",
+});
+
+// Gönderim durumu
+const isSubmitting = ref(false);
+const successMessage = ref("");
+const errorMessage = ref("");
+
+// Formu API'ye gönderme işlevi
+const submitForm = async () => {
+  isSubmitting.value = true;
+  successMessage.value = "";
+  errorMessage.value = "";
+
+  try {
+    await sendMessage(form.value);
+    successMessage.value = "Mesajınız başarıyla gönderildi!";
+    form.value = { name: "", number: "", email: "", message: "" }; // Formu sıfırla
+  } catch (error) {
+    errorMessage.value = "Mesaj gönderilirken bir hata oluştu.";
+    console.error("API Hatası:", error);
+  } finally {
+    isSubmitting.value = false;
+  }
+};
 </script>
 <template>
   <FixedUtil />
@@ -18,6 +51,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
         style=""
       ></iframe>
     </div>
+   <form action="" @submit.prevent="submitForm">
     <div class="container px-5 py-24 mx-auto flex">
       <div
         class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
@@ -29,6 +63,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
           <input
             type="text"
             id="companyName"
+            v-model="form.name"
             name="companyName"
             class="w-full bg-white rounded border border-primary focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-primary py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
@@ -36,8 +71,10 @@ import FooterComponent from '@/components/FooterComponent.vue';
         <div class="relative mb-4">
           <label for="companyName" class="leading-7 text-sm text-primary">İletişim numarası</label>
           <input
-            type="text"
+            type="number"
+            inputmode="numeric"
             id="companyName"
+            v-model="form.number"
             name="companyName"
             class="w-full bg-white rounded border border-primary focus:border-primary focus:ring-2 focus:ring-primary text-base outline-none text-primary py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
@@ -46,6 +83,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
           <label for="email" class="leading-7 text-sm text-primary">Email</label>
           <input
             type="email"
+            v-model="form.email"
             id="email"
             name="email"
             class="w-full bg-second rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-primary py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -55,22 +93,27 @@ import FooterComponent from '@/components/FooterComponent.vue';
           <label for="message" class="leading-7 text-sm text-primary">Mesaj</label>
           <textarea
             id="message"
+            v-model="form.message"
             name="message"
             class="w-full bg-second rounded border border-primary focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-primary py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
         <button
+        :disabled="isSubmitting"
           class="text-second bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
         >
-          Gönder
+        {{ isSubmitting ? "Gönderiliyor..." : "Gönder" }}
         </button>
-        <p class="text-xs text-gray-500 mt-3">
-          iletişim bilgilerinizi doldurarak bizimle partner ola bilirsiniz
-        </p>
+
+         <!-- Başarı & Hata Mesajları -->
+         <p v-if="successMessage" class="text-xs text-gray-500 mt-3">{{ successMessage }}</p>
+        <p v-if="errorMessage" class="text-xs text-gray-500 mt-3">{{ errorMessage }}</p>
       </div>
     </div>
+   </form>
   </section>
 
   <!-- footer  -->
   <FooterComponent/>
 </template>
+

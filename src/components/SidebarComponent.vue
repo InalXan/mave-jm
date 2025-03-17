@@ -7,66 +7,36 @@
 
 		<div class="h-16 flex items-center w-full">
 			<!-- Logo Section -->
-			<a class="h-12 w-12 mx-auto" href="https://layoutlore.com">
+			<RouterLink class="h-12 w-12 mx-auto" href="/mave/admin/profile">
 				<img
 					class="h-12 w-12 mx-auto"
 					src="@/assets/images/admin/layoutlore/single.png"
 					alt="svelte logo" />
-			</a>
+      </RouterLink>
 		</div>
 
 		<ul>
+
 			<!-- Items Section -->
-			<li class="hover:bg-gray-100">
-				<a
-					href="."
-					class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-primary">
-					<svg
-						class="h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<polyline
-							points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
-						<path
-							d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0
-							2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0
-							0-1.79 1.11z"></path>
-					</svg>
 
-				</a>
-			</li>
 
 			<li class="hover:bg-gray-100">
-				<a
-					href="."
+				<RouterLink
+					to="/mave/admin/profile"
 					class="h-16 px-6 flex justify-center items-center w-full
 					focus:text-primary">
-					<svg
-						class="h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<path
-							d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-					</svg>
-
-				</a>
+					<box-icon name='home-smile' type='solid' ></box-icon>
+      </RouterLink>
 			</li>
+			<li class="hover:bg-gray-100">
+				<RouterLink
+					to="/mave/admin/inbox"
+					class="h-16 px-6 flex flex justify-center items-center w-full
+					focus:text-primary">
+					<box-icon type='solid' name='inbox'></box-icon>
 
+				</RouterLink>
+			</li>
 			<li class="hover:bg-gray-100">
 				<a
 					href="."
@@ -120,63 +90,21 @@
 			</li>
 
 			<li class="hover:bg-gray-100">
-				<a
-					href="."
+				<RouterLink
+					to="/mave/admin/about"
 					class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-primary">
-					<svg
-						class="h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<circle cx="12" cy="12" r="3"></circle>
-						<path
-							d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1
-							0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0
-							0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2
-							2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0
-							0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1
-							0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0
-							0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65
-							0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0
-							1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0
-							1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2
-							0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0
-							1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0
-							2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0
-							0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65
-							1.65 0 0 0-1.51 1z"></path>
-					</svg>
-				</a>
+          <box-icon name='question-mark' ></box-icon>
+      </RouterLink>
 			</li>
 
 			<li class="hover:bg-gray-100">
-				<a
-					href="."
+				<RouterLink
+					to="/mave/admin/corporative"
 					class="h-16 px-6  flex justify-center items-center w-full
 					focus:text-primary">
-					<svg
-						class="h-5 w-5"
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round">
-						<path
-							d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-						<path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-					</svg>
-				</a>
+          <box-icon name='bell' animation='tada' ></box-icon>
+      </RouterLink>
 			</li>
 
 		</ul>
@@ -184,6 +112,7 @@
 		<div class="mt-auto h-16 flex items-center w-full">
 			<!-- Action Section -->
 			<button
+      @click="logout"
 				class="h-16 w-10 mx-auto flex flex justify-center items-center
 				w-full focus:text-primary hover:bg-primary/80 cursor-pointer transition-all text-[crimson] hover:text-second focus:outline-none">
 				<svg
@@ -207,3 +136,14 @@
 
 	</aside>
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const logout = () => {
+  localStorage.removeItem("accessToken");
+  router.push("/mave/admin/login");
+};
+</script>
