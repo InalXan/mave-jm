@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import LoaderComponent from './components/LoaderComponent.vue'
 import CookieUtil from './utils/CookieUtil.vue'
+import WhatsappComponent from './components/WhatsappComponent.vue'
 import { ref } from 'vue'
 const isLoading = ref(true)
 
@@ -12,6 +13,7 @@ setTimeout(() => {
 <template>
   <RouterView />
   <CookieUtil />
+  <WhatsappComponent/>
   <LoaderComponent v-if="isLoading" />
 </template>
 <style scoped>

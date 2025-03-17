@@ -89,20 +89,13 @@ const cardItems = ref([
         </div>
       </div>
       <div class="flex flex-col justify-center items-center text-second">
-        <div class="h-16 w-52 rounded-2xl py-4 flex items-center justify-center bg-primary">
-          <h1 class="text-4xl font-bold mx-1">35</h1>
-          <h2 class="mx-1">
-            Years Of <br />
-            experiences
-          </h2>
-        </div>
         <div
-          class="w-52 h-112 m-5 p-4 rounded-xl bg-[url('@/assets/images/contents/home_about_2.jpg')] bg-center bg-cover"
+          class="w-52 h-112 mx-5  rounded-xl bg-[url('@/assets/images/contents/home_about_2.jpg')] bg-center bg-cover"
         ></div>
       </div>
     </div>
     <!-- right side  -->
-    <div class="md:w-1/2 w-full">
+    <div class="md:w-1/2 w-full flex items-center">
       <div class="mx-5">
         <h1 class="uppercase text-primary font-bold fles justify-center items-center">
           <ion-icon name="map-sharp" class="-my-1"></ion-icon> why choose us?
@@ -117,84 +110,7 @@ const cardItems = ref([
           quidem accusamus, maiores ipsum hic itaque fuga.
         </p>
       </div>
-      <!-- cards  -->
-      <div flex justify-center>
-        <div class="mx-5 flex justify-center gap-2 items-center flex-col lg:flex-row">
-          <!-- card start  -->
-          <div
-            class="w-full lg:w-76 p-4 rounded-2xl flex flex-col items-between shadow-sm border border-[rgb(0,0,0,0.2)]"
-          >
-            <div class="w-full my-4 flex justify-center font-bold text-primary text-2xl">
-              <ion-icon
-                name="card-sharp"
-                class="p-2 text-second bg-primary rounded-full mx-2"
-              ></ion-icon>
-              <h1>Passport Plus</h1>
-            </div>
-            <div>
-              <ul class="flex flex-col items-start justify-center">
-                <li class="flex justify-center items-center mx-4">
-                  <ion-icon name="checkmark-sharp" class="text-primary text-xl"></ion-icon> Beyond
-                  Border Immigration
-                </li>
 
-                <li class="flex justify-center items-center mx-4">
-                  <ion-icon name="checkmark-sharp" class="text-primary text-xl"></ion-icon>
-                  Worldwide Visa Assistance
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- card end  -->
-          <!-- card start  -->
-          <div
-            class="w-full lg:w-76 p-4 rounded-2xl flex flex-col items-between shadow-sm border border-[rgb(0,0,0,0.2)]"
-          >
-            <div class="w-full my-4 flex justify-center font-bold text-primary text-2xl">
-              <ion-icon
-                name="business-sharp"
-                class="p-2 text-second bg-primary rounded-full mx-2"
-              ></ion-icon>
-              <h1>Passport Plus</h1>
-            </div>
-            <div>
-              <ul class="flex flex-col items-start justify-center">
-                <li class="flex justify-center items-center mx-4">
-                  <ion-icon name="checkmark-sharp" class="text-primary text-xl"></ion-icon> Beyond
-                  Border Immigration
-                </li>
-
-                <li class="flex justify-center items-center mx-4">
-                  <ion-icon name="checkmark-sharp" class="text-primary text-xl"></ion-icon>
-                  Worldwide Visa Assistance
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- card end  -->
-        <!-- contact btns  -->
-        <div class="w-full flex justify-start items-center">
-          <RouterLink
-            to="avantajlar"
-            class="flex justify-center items-center p-4 rounded-full my-5 mx-5 border border-primary text-primary hover:bg-primary hover:text-second transition-all"
-            >Avantajlarimiz <ion-icon name="arrow-forward-sharp"></ion-icon
-          ></RouterLink>
-          <a href="" class="flex justify-center items-center"
-            ><div>
-              <ion-icon
-                name="call-sharp"
-                class="p-2 text-second bg-primary rounded-full mx-2"
-              ></ion-icon>
-            </div>
-            <div class="flex flex-col">
-              <h1 class="text-primary">Need help?</h1>
-              <br />
-              <span>0 (551) 25 25</span>
-            </div></a
-          >
-        </div>
-      </div>
     </div>
   </div>
   <!-- about end  -->

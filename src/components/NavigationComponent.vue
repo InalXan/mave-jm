@@ -5,7 +5,9 @@
     <div class="max-w-6xl w-full mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div>
-        <img src="@/assets/images/logo/logo.png" class="w-28" alt="Logo" />
+        <RouterLink to="/">
+          <img src="@/assets/images/logo/logo.png" class="w-28" alt="Logo" />
+        </RouterLink>
       </div>
 
       <!-- Mega Menu -->
@@ -119,7 +121,6 @@ const menuItems = ref([
     submenu: [
       { name: 'Hakkımızda', link: '/about' },
       { name: 'Sunduğumuz Avantajlar', link: '/advantages' },
-      { name: 'Nasıl Vize Alırım?', link: '/how-can-i-get-visa' },
       { name: 'Tır Şoförü Vizesi', link: '/truck-visa' },
       { name: 'Sıkça Sorulan Sorular', link: '/favorite-questions' },
     ],

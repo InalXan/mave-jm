@@ -64,7 +64,7 @@ const slides = [
     title: 'Hayallerinizi Gerçeğe Dönüştürün',
     description: 'Seyahat etmek hiç bu kadar kolay olmamıştı. Yeni deneyimlere hazır olun!',
     buttonText: 'Hemen Katıl',
-    image: new URL('@/assets/images/intro/intro_image.png', import.meta.url).href,
+    image: new URL('@/assets/images/intro/intro_image2.png', import.meta.url).href,
   },
   {
     title: 'Vize İşlemleri Artık Çok Daha Kolay',
@@ -76,7 +76,7 @@ const slides = [
     title: 'Keşfet, Öğren, Büyü',
     description: 'Dünyanın dört bir yanına seyahat ederek en guzel yerlerde hayatını zenginleştir.',
     buttonText: 'Keşfet',
-    image: new URL('@/assets/images/intro/intro_image2.png', import.meta.url).href,
+    image: new URL('@/assets/images/intro/intro_image.png', import.meta.url).href,
   },
 ]
 
