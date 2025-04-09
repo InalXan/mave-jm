@@ -27,19 +27,19 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { getAllMission } from '@/api/useMission';
+import { ref, onMounted } from 'vue'
+import { getAllMission } from '@/api/useMission'
 
-const missions = ref([]); // Boş bir dizi olarak başlatıldı
+const missions = ref([]) // Boş bir dizi olarak başlatıldı
 
 const fetchMissions = async () => {
   try {
-    const response = await getAllMission();
-    missions.value = response; // API'den gelen tüm misyonları listeye atıyoruz
+    const response = await getAllMission()
+    missions.value = response // API'den gelen tüm misyonları listeye atıyoruz
   } catch (error) {
-    console.error("İçerik yüklenirken hata oluştu:", error);
+    console.error('İçerik yüklenirken hata oluştu:', error)
   }
-};
+}
 
-onMounted(fetchMissions);
+onMounted(fetchMissions)
 </script>

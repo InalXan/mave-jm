@@ -57,9 +57,9 @@ const cardItems = ref([
         <div class="w-full flex justify-end items-center">
           <RouterLink
             to="/order-visa"
-            class="p-2 m-1 w-12 h-12 text-second rounded-full bg-primary flex justify-center items-center absolute hover:-rotate-25 hover:bg-second hover:text-primary transition-all"
+            class="p-2 m-1 w-12 h-12 text-second rounded-full bg-primary flex justify-center items-center absolute hover:-rotate-25 hover:bg-primary/50 hover:text-primary transition-all"
           >
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+          <box-icon name='right-arrow-alt' color="white"></box-icon>
           </RouterLink>
         </div>
         <div class="w-full p-2 m-2 text-left">
@@ -73,7 +73,7 @@ const cardItems = ref([
     </div>
   </div>
   <!-- services end  -->
-   <VisitMiddleware/>
+  <VisitMiddleware />
   <!-- sponsor start -->
   <!-- <SponsorUtil /> -->
 
@@ -90,32 +90,29 @@ const cardItems = ref([
       </div>
       <div class="flex flex-col justify-center items-center text-second">
         <div
-          class="w-52 h-112 mx-5  rounded-xl bg-[url('@/assets/images/contents/home_about_2.jpg')] bg-center bg-cover"
+          class="w-52 h-112 mx-5 rounded-xl bg-[url('@/assets/images/contents/home_about_2.jpg')] bg-center bg-cover"
         ></div>
       </div>
     </div>
     <!-- right side  -->
     <div class="md:w-1/2 w-full flex items-center">
       <div class="mx-5">
-        <h1 class="uppercase text-primary font-bold fles justify-center items-center">
-          <ion-icon name="map-sharp" class="-my-1"></ion-icon> why choose us?
+        <h1 class=" text-primary font-bold fles justify-center items-center">
+          <box-icon type='solid' name='map-pin' color="brown"></box-icon> NEDEN BİZİ SEÇMELİSİNİZ?
         </h1>
         <h1 class="text-primary text-2xl font-bold">
-          <span class="text-[#222]">Where Wanderlust Meets</span> <br />
-          Dream Destinations
+          <span class="text-[#222]">Yüksek başarılarımızla</span> <br />
+          daima yanınızdayız
         </h1>
         <p class="leading-8 my-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis quae, deleniti dolores
-          consectetur repellat tenetur velit doloremque, voluptas nulla obcaecati quibusdam numquam
-          quidem accusamus, maiores ipsum hic itaque fuga.
+          Sizi zorlu başvuru yollarından, uzunca beklemelerden uzaklaştırıp hayallerinizi gerçekleştirmenizi sağlıyoruz.
         </p>
       </div>
-
     </div>
   </div>
   <!-- about end  -->
   <VisasUtil />
 
   <!-- footer  -->
-  <FooterComponent/>
+  <FooterComponent />
 </template>

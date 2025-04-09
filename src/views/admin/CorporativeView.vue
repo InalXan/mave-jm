@@ -31,9 +31,13 @@
               <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 text-sm font-medium rounded-full"
-                  :class="message.status === 'new' ? 'bg-green-300 text-green-800' : 'bg-gray-200 text-gray-600'"
+                  :class="
+                    message.status === 'new'
+                      ? 'bg-green-300 text-green-800'
+                      : 'bg-gray-200 text-gray-600'
+                  "
                 >
-                  {{ message.status === "new" ? "Yeni" : "Okundu" }}
+                  {{ message.status === 'new' ? 'Yeni' : 'Okundu' }}
                 </span>
                 <button
                   @click="deleteMessage(message._id)"
@@ -53,48 +57,49 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import SidebarComponent from "@/components/SidebarComponent.vue";
-import { getMessages, deleteMessage as deleteMsgApi } from "@/api/useMessage";
+import { ref, computed, onMounted } from 'vue'
+import SidebarComponent from '@/components/SidebarComponent.vue'
+import { getMessages, deleteMessage as deleteMsgApi } from '@/api/useMessage'
 
 // 📌 API’den mesajları çek
-const messages = ref([]);
-const loading = ref(true);
-const searchQuery = ref("");
+const messages = ref([])
+const loading = ref(true)
+const searchQuery = ref('')
 
 // 📌 API’den tüm mesajları çek
 const fetchMessages = async () => {
   try {
-    messages.value = await getMessages();
+    messages.value = await getMessages()
   } catch (error) {
-    console.error("Mesajları yüklerken hata:", error);
+    console.error('Mesajları yüklerken hata:', error)
   } finally {
-    loading.value = false;
+    loading.value = false
   }
-};
+}
 
 // 📌 Mesaj Silme İşlemi
 const deleteMessage = async (id) => {
-  if (!confirm("Bu mesajı silmek istediğinize emin misiniz?")) return;
+  if (!confirm('Bu mesajı silmek istediğinize emin misiniz?')) return
   try {
-    await deleteMsgApi(id);
-    messages.value = messages.value.filter((msg) => msg._id !== id);
+    await deleteMsgApi(id)
+    messages.value = messages.value.filter((msg) => msg._id !== id)
   } catch (error) {
-    console.error("Mesaj silme hatası:", error);
+    console.error('Mesaj silme hatası:', error)
   }
-};
+}
 
 // 📌 Arama Filtreleme
 const filteredMessages = computed(() => {
-  return messages.value.filter((msg) =>
-    msg.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-    msg.email.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-    msg.message.toLowerCase().includes(searchQuery.value.toLowerCase())
-  );
-});
+  return messages.value.filter(
+    (msg) =>
+      msg.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      msg.email.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      msg.message.toLowerCase().includes(searchQuery.value.toLowerCase()),
+  )
+})
 
 // 📌 Sayfa Yüklendiğinde API Çağrısı
-onMounted(fetchMessages);
+onMounted(fetchMessages)
 </script>
 
 <style>

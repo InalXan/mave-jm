@@ -1,34 +1,92 @@
 <script setup>
-import FixedUtil from '@/utils/FixedUtil.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
+import FixedUtil from '@/utils/FixedUtil.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 </script>
 <template>
-  <FixedUtil/>
+  <FixedUtil />
   <div class="py-28 bg-second">
-  <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
       <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
         <div class="md:5/12 lg:w-5/12">
-          <img src="@/assets/images/about/truck-visa.jpg" alt="image" loading="lazy" width="" height="">
+          <img
+            src="@/assets/images/about/truck-visa.jpg"
+            alt="image"
+            loading="lazy"
+            width=""
+            height=""
+          />
         </div>
         <div class="md:7/12 lg:w-6/12">
           <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">Tır şoförü vizesi</h2>
-          <p class="mt-6 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
-          <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+          <p class="mt-6 text-gray-600">
+            TIR şoförleri, uluslararası taşımacılık yaparken bazı ülkelerde vize almak zorundadırlar. TIR şoförü vizesi, taşımacılık işini yurt dışına taşıyan profesyonel şoförlerin yasal olarak çalışabilmeleri için gerekli olan bir izin türüdür. Bu vize, şoförün taşıma yapacağı ülkelere girebilmesi ve işini icra edebilmesi için gereklidir.
+          </p>
+          <p class="mt-4 text-gray-600">
+            Vize Türü ve Başvuru Koşulları:
+          </p>
           <ul class="list-disc mt-6 text-gray-600">
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sunt provident eum dolorem eos obcaecati nulla harum impedit laudantium facere, asperiores iure voluptate voluptatem cupiditate dolorum perferendis molestiae optio neque!</li>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci fugit, a quod asperiores nobis aliquam, maxime ea voluptas ducimus maiores tempora voluptatem rerum repellendus doloribus saepe quos molestias voluptatum delectus!</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia aliquam nulla numquam sit corporis beatae doloribus quod tenetur quas cum iusto porro, aspernatur quaerat obcaecati nihil saepe tempore, officia earum.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus incidunt dicta ex assumenda voluptates nisi dignissimos velit dolorem ducimus commodi, esse recusandae eligendi libero repellendus aliquid rerum saepe ipsam nemo.</li>
+            <li>
+              C Tipi Vize (Kısa Süreli): <br>
+              Bu vize, genellikle Schengen Bölgesi gibi Avrupa ülkelerinde 90 güne kadar geçerli olan kısa süreli bir vize türüdür. TIR şoförleri, bu vize ile belirtilen süre boyunca iş seyahatlerini gerçekleştirebilirler.
+            </li>
+            <li>
+              D Tipi Vize (Uzun Süreli): <br>
+              Bazı durumlarda, TIR şoförleri uzun süreli vizeye ihtiyaç duyabilirler. Bu vize, genellikle 90 günden daha uzun süreli taşımacılık işleri için alınır.
+            </li>
+            <li>
+              Gerekli Belgeler:
+            </li>
+            <li>
+              Pasaport:
+              En az 6 ay geçerli, yıpranmamış pasaport gereklidir.
+            </li>
+            
+            <li>
+              Vize Başvuru Formu:
+              Doldurulmuş ve imzalanmış vize başvuru formu.
+            </li>
+            
+            <li>
+              Fotoğraf:
+              Biyometrik fotoğraf, vize başvurusuna eklenir.
+            </li>
+            
+            <li>
+              Çalışma Belgesi:
+              Başvuru sahibinin TIR şoförü olarak çalıştığını belgeleyen resmi evraklar.
+            </li>
+            
+            <li>
+              Davetiye:
+              Gideceği ülkedeki bir firma tarafından düzenlenmiş davetiye mektubu (bazı ülkeler için gereklidir).
+            </li>
+            
+            <li>
+              Sigorta:
+              Seyahat süresini kapsayan sağlık sigortası.
+            </li>
+            
+            <li>
+              Araç Belgeleri:
+              Kullanılacak TIR'a ait belgeler ve araç ruhsatı.
+            </li>
+            
+            <li>
+              Çalışma İzni:
+              Gerektiği takdirde, çalışma izni belgeleri.
+            </li>
           </ul>
           <div class="w-full flex justify-end items-center mt-6">
-
-          <RouterLink class="flex justify-center items-center text-right p-2 bg-second border-2 border-primary text-primary hover:bg-primary hover:text-second transition-all" to="/order-visa">Hemen basvur <ion-icon name="arrow-forward-circle" class="text-2xl"></ion-icon></RouterLink>
+            <RouterLink
+              class="flex justify-center items-center text-right p-2 bg-second border-2 border-primary text-primary hover:bg-primary hover:text-second transition-all"
+              to="/order-visa"
+              >Hemen basvur<box-icon name='right-arrow-alt' color="brown"></box-icon></RouterLink>
           </div>
         </div>
       </div>
+    </div>
   </div>
-</div>
 
   <!-- footer  -->
-  <FooterComponent/>
+  <FooterComponent />
 </template>

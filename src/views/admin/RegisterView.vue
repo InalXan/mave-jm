@@ -87,26 +87,26 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useAuth } from "@/api/useAuth";
-import { useRouter } from "vue-router";
+import { ref } from 'vue'
+import { useAuth } from '@/api/useAuth'
+import { useRouter } from 'vue-router'
 
-const { register } = useAuth();
-const router = useRouter();
+const { register } = useAuth()
+const router = useRouter()
 
-const name = ref("");
-const email = ref("");
-const password = ref("");
-const errorMessage = ref("");
+const name = ref('')
+const email = ref('')
+const password = ref('')
+const errorMessage = ref('')
 
 const handleRegister = async () => {
   try {
-    await register(name.value, email.value, password.value);
-    router.push("/mave/admin/login"); // Kayıttan sonra giriş sayfasına yönlendir
+    await register(name.value, email.value, password.value)
+    router.push('/mave/admin/login') // Kayıttan sonra giriş sayfasına yönlendir
   } catch (error) {
-    errorMessage.value = error.msg || "Registration failed.";
+    errorMessage.value = error.msg || 'Registration failed.'
   }
-};
+}
 </script>
 
 <style scoped>

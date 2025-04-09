@@ -1,7 +1,9 @@
 <template>
   <div class="bg-gray-100">
     <!-- Breadcrumb -->
-    <div class="header bg-second h-16 px-10 py-8 border-b-2 border-gray-200 flex items-center justify-between">
+    <div
+      class="header bg-second h-16 px-10 py-8 border-b-2 border-gray-200 flex items-center justify-between"
+    >
       <div class="flex items-center space-x-2 text-gray-400">
         <span class="text-primary tracking-wider font-thin text-md"><a href="#">Home</a></span>
         <span>/</span>
@@ -13,7 +15,7 @@
     <!-- Başlık -->
     <div class="header my-3 h-12 px-10 flex items-center justify-between">
       <h1 class="font-medium text-2xl">About</h1>
-      <h2>{{ selectedMission ? "İçeriği Güncelle" : "Yeni İçerik Ekle" }}</h2>
+      <h2>{{ selectedMission ? 'İçeriği Güncelle' : 'Yeni İçerik Ekle' }}</h2>
     </div>
 
     <!-- Form ve Liste -->
@@ -33,7 +35,7 @@
             <button
               class="w-full bg-primary text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 hover:bg-primary/50 focus:outline-none"
             >
-              {{ selectedMission ? "Güncelle" : "Ekle" }}
+              {{ selectedMission ? 'Güncelle' : 'Ekle' }}
             </button>
             <button
               v-if="selectedMission"
@@ -48,7 +50,9 @@
       </div>
 
       <!-- Liste Alanı -->
-      <div class="w-full lg:w-2/3 m-1 bg-second shadow-lg text-lg rounded-sm border border-gray-200">
+      <div
+        class="w-full lg:w-2/3 m-1 bg-second shadow-lg text-lg rounded-sm border border-gray-200"
+      >
         <div class="overflow-x-auto rounded-lg p-3">
           <table class="table-auto w-full">
             <thead class="text-sm font-semibold uppercase text-gray-800 bg-gray-50">
@@ -93,65 +97,65 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { getAllMission, createMission, updateMission, deleteMission } from "@/api/useMission";
+import { ref, onMounted } from 'vue'
+import { getAllMission, createMission, updateMission, deleteMission } from '@/api/useMission'
 
 // State tanımlamaları
-const missions = ref([]);
-const selectedMission = ref(null);
-const mission = ref("");
+const missions = ref([])
+const selectedMission = ref(null)
+const mission = ref('')
 
 // İçerikleri API'den çekme
 const fetchMissions = async () => {
   try {
-    missions.value = await getAllMission();
+    missions.value = await getAllMission()
   } catch (error) {
-    console.error("İçerikler yüklenirken hata oluştu:", error);
+    console.error('İçerikler yüklenirken hata oluştu:', error)
   }
-};
+}
 
 // Yeni içerik ekleme veya güncelleme
 const handleSubmit = async () => {
   try {
-    if (!mission.value.trim()) return alert("Misyon içeriği boş olamaz!");
+    if (!mission.value.trim()) return alert('Misyon içeriği boş olamaz!')
 
     if (selectedMission.value) {
-      await updateMission(selectedMission.value._id, { mission: mission.value });
+      await updateMission(selectedMission.value._id, { mission: mission.value })
     } else {
-      await createMission({ mission: mission.value });
+      await createMission({ mission: mission.value })
     }
 
-    resetForm();
-    fetchMissions();
+    resetForm()
+    fetchMissions()
   } catch (error) {
-    console.error("İçerik kaydedilirken hata oluştu:", error);
+    console.error('İçerik kaydedilirken hata oluştu:', error)
   }
-};
+}
 
 // İçeriği düzenleme
 const handleEdit = (item) => {
-  selectedMission.value = item;
-  mission.value = item.mission;
-};
+  selectedMission.value = item
+  mission.value = item.mission
+}
 
 // İçeriği silme
 const handleDelete = async (id) => {
-  if (confirm("Bu içeriği silmek istediğinize emin misiniz?")) {
+  if (confirm('Bu içeriği silmek istediğinize emin misiniz?')) {
     try {
-      await deleteMission(id);
-      fetchMissions();
+      await deleteMission(id)
+      fetchMissions()
     } catch (error) {
-      console.error("Silme işlemi başarısız:", error);
+      console.error('Silme işlemi başarısız:', error)
     }
   }
-};
+}
 
 // Form sıfırlama
 const resetForm = () => {
-  selectedMission.value = null;
-  mission.value = "";
-};
+  selectedMission.value = null
+  mission.value = ''
+}
 
 // Sayfa yüklendiğinde içerikleri çek
-onMounted(fetchMissions);
+onMounted(fetchMissions)
 </script>

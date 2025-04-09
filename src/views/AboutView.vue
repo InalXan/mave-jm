@@ -1,26 +1,25 @@
 <script setup>
 import FixedUtil from '@/utils/FixedUtil.vue'
-import MissionUtil from '@/utils/MissionUtil.vue';
-import FooterComponent from '@/components/FooterComponent.vue';
-import { ref, onMounted } from 'vue';
-import { getAllContent } from '@/api/useAbout';
+import MissionUtil from '@/utils/MissionUtil.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import { ref, onMounted } from 'vue'
+import { getAllContent } from '@/api/useAbout'
 
-const content = ref({ title: "", description: "" });
+const content = ref({ title: '', description: '' })
 
 const fetchContents = async () => {
-    try {
-        const response = await getAllContent();
-        if (response.length > 0) {
-            content.value = response[0];
-        }
-    } catch (error) {
-        console.error("İçerik yüklenirken hata oluştu:", error);
+  try {
+    const response = await getAllContent()
+    if (response.length > 0) {
+      content.value = response[0]
     }
-};
+  } catch (error) {
+    console.error('İçerik yüklenirken hata oluştu:', error)
+  }
+}
 
-onMounted(fetchContents);
+onMounted(fetchContents)
 </script>
-
 
 <template>
   <FixedUtil />
@@ -28,7 +27,7 @@ onMounted(fetchContents);
     class="bg-[url('@/assets/images/about/about-1.jpg')] bg-center bg-cover text-second py-36 text-center"
   >
     <div class="container bg-[rgb(0,0,0,0.6)] mx-auto px-6 md:px-12 lg:px-16 py-6">
-      <h2 class="text-4xl text-primary font-extrabold tracking-wide">Mave-jm</h2>
+      <h2 class="text-4xl text-primary font-extrabold tracking-wide">MAVE - JM</h2>
     </div>
   </section>
 
@@ -59,7 +58,7 @@ onMounted(fetchContents);
   </section>
 
   <!-- missions  -->
-   <MissionUtil/>
+  <MissionUtil />
   <!-- footer  -->
-   <FooterComponent/>
+  <FooterComponent />
 </template>
