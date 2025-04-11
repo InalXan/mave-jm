@@ -132,13 +132,12 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1520967824495-b529aeba26df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1562887189-5fde6b0a8d31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/spanish/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/spanish/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/spanish/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/spanish/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/spanish/5.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

@@ -132,13 +132,13 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1555881400-74c8eee9f0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1587164545400-2a672e5ac5d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1587164545400-2a672e5ac5d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1585336623719-9a1a9a9b9b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1585336623719-9a1a9a9b9b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/portugal/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/portugal/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/portugal/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/portugal/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/portugal/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/portugal/6.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

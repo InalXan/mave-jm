@@ -132,13 +132,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/greece/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/greece/7.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

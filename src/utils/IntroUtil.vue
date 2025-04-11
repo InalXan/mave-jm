@@ -34,7 +34,7 @@
           :key="index"
           class="relative overflow-hidden"
         >
-          <div class="flex flex-col lg:flex-row items-center justify-between bg-white/90 backdrop-blur-sm p-6 md:p-10 lg:p-12 min-h-[400px] md:min-h-[500px]">
+          <div class="flex flex-col lg:flex-row items-center justify-between bg-second p-6 md:p-10 lg:p-12 min-h-[400px] md:min-h-[500px]">
             <!-- Content -->
             <div class="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 md:space-y-6 lg:space-y-8 max-w-xl lg:max-w-2xl lg:pr-10">
               <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
@@ -67,7 +67,7 @@
             
             <!-- Image -->
             <div class="hidden lg:block flex-1 max-w-md xl:max-w-lg">
-              <div class="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg transform transition duration-500 hover:scale-[1.02]">
+              <div class="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-sm transform transition duration-500 hover:scale-[1.02]">
                 <img 
                   :src="slide.image" 
                   :alt="slide.title"

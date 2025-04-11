@@ -131,15 +131,15 @@
     },
     setup() {
       const thumbsSwiper = ref(null);
-      const images = [
-        'https://images.unsplash.com/photo-1538485399081-7c897df6be3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1538488881038-e252a119ace7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1506816561089-5cc37b0aa707?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1533856493584-0c6ca8ca9ce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
-
+       const images = [
+  new URL('@/assets/images/countries/kore/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/kore/7.jpg', import.meta.url).href,
+];
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;
       };

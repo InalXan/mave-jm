@@ -1,5 +1,3 @@
-
-
 <template>
   <div
     class="fixed top-0 w-full h-20 md:h-28 flex justify-around items-center px-4 bg-second/80 backdrop-blur-md shadow-sm z-50 border-b border-primary/20"
@@ -15,8 +13,7 @@
       <!-- Desktop Mega Menu -->
       <nav class="hidden md:flex space-x-2 lg:space-x-4">
         <div v-for="(menuItem, index) in menuItems" :key="menuItem.name" class="relative group">
-          <RouterLink
-            :to="menuItem.link"
+          <RouterLink :to="menuItem.link"
             class="text-xs lg:text-sm px-3 py-2 hover:bg-primary hover:text-second transition-all duration-200 rounded-lg font-medium"
             active-class="bg-primary text-second"
           >
@@ -26,9 +23,9 @@
           <!-- Dropdown Menu -->
           <div
             v-if="menuItem.submenu"
-            class="absolute left-0 mt-0 w-106 bg-second/95 backdrop-blur-md shadow-xl rounded-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top transform scale-y-95 group-hover:scale-y-100"
+            class="absolute left-0 mt-0 w-[26rem] bg-second/95 backdrop-blur-md shadow-xl rounded-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top transform scale-y-95 group-hover:scale-y-100"
           >
-            <ul class="space-y-1 w-full flex flex-col-4 flex-row-4 flex-wrap">
+            <ul class="space-y-1 w-full grid grid-cols-4">
               <li
                 v-for="sub in menuItem.submenu"
                 :key="sub.name"
@@ -199,9 +196,10 @@ import { ref } from 'vue'
 const menuItems = ref([
   { name: 'ANA SAYFA', link: '/' },
   {
-    name: 'ÜLKELER',
+    name: 'HIZMET VERDİĞİMİZ ÜLKELER',
+    link: '/germany',
     submenu: [
-             { name: 'Almanya', link: '/germany' },
+      { name: 'Almanya', link: '/germany' },
       { name: 'İngiltere', link: '/england' },
       { name: 'Fransa', link: '/french' },
       { name: 'Amerika', link: '/america' },
@@ -228,12 +226,11 @@ const menuItems = ref([
   { name: 'VİZE REHBERİ', link: '/how-can-i-get-visa' },
   {
     name: 'BİLGİLER',
-    link: '/info',
+    link: '/about',
     submenu: [
       { name: 'Hakkımızda', link: '/about' },
       { name: 'Avantajlar', link: '/advantages' },
       { name: 'Tır Şoförü Vizesi', link: '/truck-visa' },
-      { name: 'SSS', link: '/faq' }
     ]
   },
   { name: 'BAŞVURU', link: '/order-visa' },

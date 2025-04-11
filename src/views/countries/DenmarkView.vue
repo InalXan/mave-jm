@@ -133,13 +133,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1508050919630-b135583f29b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1503135935062-b7d1f5a0690f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/denmark/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/denmark/7.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

@@ -132,13 +132,11 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/germany/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/germany/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/germany/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/germany/4.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

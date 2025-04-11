@@ -132,13 +132,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1584646098370-6c7f6b9a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/romania/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/romania/7.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

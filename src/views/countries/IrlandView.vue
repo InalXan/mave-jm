@@ -132,14 +132,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1602797882193-51cb0e037534?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1528238646472-f2366160b6c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1553729459-66a2d5a5b1b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
-
+  new URL('@/assets/images/countries/irland/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/irland/7.jpg', import.meta.url).href,
+];
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;
       };

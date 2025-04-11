@@ -132,13 +132,13 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1580974730055-2f1e93f833c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1597074866923-dc0589150358?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/belgium/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/belgium/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/belgium/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/belgium/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/belgium/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/belgium/6.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

@@ -132,13 +132,13 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/luxemburg/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/luxemburg/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/luxemburg/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/luxemburg/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/luxemburg/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/luxemburg/6.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

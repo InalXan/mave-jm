@@ -132,13 +132,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1591262188311-2b7b122b0b24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1600712242868-18c5bd9a21a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1600711724564-526eda19acd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1600712242868-18c5bd9a21a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/malta/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/malta/7.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

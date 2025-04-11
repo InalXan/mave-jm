@@ -132,13 +132,14 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1529260830199-42c24126f198?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1515859005217-8a1f08870f59?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1495563381401-ecfbcaaa60f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/italy/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/italy/7.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

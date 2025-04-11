@@ -133,13 +133,15 @@
     setup() {
       const thumbsSwiper = ref(null);
       const images = [
-        'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1491557345352-5929e343eb89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+  new URL('@/assets/images/countries/canada/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/5.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/6.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/7.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/canada/8.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;

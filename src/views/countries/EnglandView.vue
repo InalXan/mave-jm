@@ -5,7 +5,7 @@
     <div class="lg:w-1/2 w-full p-6 lg:p-10 flex flex-col justify-center">
       <div class="max-w-2xl mx-auto">
         <div class="mb-8">
-          <span class="bg-primary/40 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block">UK VISA GUIDE</span>
+          <span class="bg-primary/40 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block">İngiltere VİZE REHBERİ</span>
           <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">İngiltere Seyahatiniz İçin Vize Rehberi</h1>
           <div class="w-20 h-1 bg-primary mb-6"></div>
           <p class="text-gray-700 leading-relaxed mb-6">
@@ -136,14 +136,13 @@
     },
     setup() {
       const thumbsSwiper = ref(null);
-      const images = [
-        'https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1500380804539-4e1e8c1e7118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-        'https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-      ];
+            const images = [
+  new URL('@/assets/images/countries/england/1.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/england/2.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/england/3.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/england/4.jpg', import.meta.url).href,
+  new URL('@/assets/images/countries/england/5.jpg', import.meta.url).href,
+];
 
       const setThumbsSwiper = (swiper) => {
         thumbsSwiper.value = swiper;
